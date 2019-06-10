@@ -2,21 +2,313 @@
 @section('title', 'About')
 
 @section('content')
-        <div class="container">
-            <div class="row banner">
-                <div class="col-md-12">
-                    <h1 class="text-left margin-top-100 editContent">
-                    About Us
-                    </h1>
-                    <h3 class="text-left margin-top-100 editContent">How we started</h3>
-                    <div class="text-left">
-                        <p>We are a group of people working on this amazing mission of teaching people how to make things out of the many things they have around them. This means they dont have to buy alot of staff to make them but to simply use the old staff they have to make something new. Isn't that great!!!</p>
-                        <p>Old things can be clothes, bags, shoes, matresses, think of anything that can be made out of it and do it.</p>
-                        <p>Innovation, creativity, imagination is what we bring out of people. This also releases the stress or the mentality of being unemployed, you can start up somthing out of it.</p>
-                        <p>Join us and we create those ideas together. See you soon!!!</p>
+        <!-- banner -->
+        <div class="banner_w3lspvt-2">
+            <div class="container">
+                <div class="d-flex style-w3layouts">
+                    <h4 class="inner-style-w3pvts mr-auto text-wh text-uppercase">About Us</h4>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page">About Page</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- //banner -->
+    </div>
+    <!-- //main banner -->
+
+    <!-- about-->
+    <section class="wthree-about py-5" id="about">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="row about-main py-3">
+                <div class="col-lg-5 about-text-grid pr-xl-5">
+                    <h3 class="main-title-w3pvt text-uppercase">First we eat, then we do everything else.</h3>
+                    <hr>
+                    <p class="mt-4">Nam venenatis neque tellus, vel sagittis lacus placerat sit amet. Morbi tristique
+                        consequat mi,
+                        vitae interdum sapien posuere ut.</p>
+                    <p class="mt-3">Mauris lectus ex, rutrum sed gravida eu, Nam augue tortor, pellentesque ut viverra
+                        id.</p>
+                    <a href="about.html" class="button-style-w3ls btn mt-sm-5 mt-4">View More</a>
+                </div>
+                <div class="col-lg-3 col-sm-5 about-right mt-lg-0 mt-5">
+                    <img src="images/a2.jpg" class="img-fluid" alt="" />
+                </div>
+                <div class="col-lg-4 col-sm-7 mt-lg-0 mt-5 about-right">
+                    <img src="images/a1.jpg" class="img-fluid" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //about -->
+
+    <!-- services -->
+    <div class="serives-w3pvt-web py-5" id="services">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="row support-bottom text-center py-5">
+                <div class="col-lg-4">
+                    <div class="services-w3ls-grid">
+                        <div class="serv-icon mx-auto">
+                            <span class="fa fa-cutlery"></span>
+                        </div>
+                        <h4 class="text-wh mt-md-4 mt-3 mb-3">Service 1</h4>
+                        <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-lg-0 mt-4">
+                    <div class="services-w3ls-grid">
+                        <div class="serv-icon clr-2 mx-auto">
+                            <span class="fa fa-apple"></span>
+                        </div>
+                        <h4 class="text-wh mt-md-4 mt-3 mb-3">Service 2</h4>
+                        <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-lg-0 mt-4">
+                    <div class="services-w3ls-grid">
+                        <div class="serv-icon clr-3 mx-auto">
+                            <span class="fa fa-beer"></span>
+                        </div>
+                        <h4 class="text-wh mt-md-4 mt-3 mb-3">Service 3</h4>
+                        <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- //services -->
+
+    <!-- team -->
+    <div class="team text-center py-5">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="tittle text-center mb-sm-5 mb-4">Our Chefs</h3>
+            <div class="row team-bottom pt-4">
+                <div class="col-lg-3 col-sm-6 team-grid">
+                    <img src="images/t1.jpg" class="img-fluid" alt="">
+                    <div class="caption">
+                        <div class="team-text">
+                            <h4>Mack Joe</h4>
+                        </div>
+                        <ul>
+                            <li class="f1">
+                                <a href="#">
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                            </li>
+                            <li class="f2">
+                                <a href="#">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                            </li>
+                            <li class="f3">
+                                <a href="#">
+                                    <span class="fa fa-google-plus"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 team-grid mt-sm-0 mt-5">
+                    <img src="images/t3.jpg" class="img-fluid" alt="">
+                    <div class="caption">
+                        <div class="team-text">
+                            <h4>Cruz Deo</h4>
+                        </div>
+                        <ul>
+                            <li class="f1">
+                                <a href="#">
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                            </li>
+                            <li class="f2">
+                                <a href="#">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                            </li>
+                            <li class="f3">
+                                <a href="#">
+                                    <span class="fa fa-google-plus"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 team-grid mt-lg-0 mt-5">
+                    <img src="images/t2.jpg" class="img-fluid" alt="">
+                    <div class="caption">
+                        <div class="team-text">
+                            <h4>Rochy Jae</h4>
+                        </div>
+                        <ul>
+                            <li class="f1">
+                                <a href="#">
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                            </li>
+                            <li class="f2">
+                                <a href="#">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                            </li>
+                            <li class="f3">
+                                <a href="#">
+                                    <span class="fa fa-google-plus"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 team-grid  mt-lg-0 mt-5">
+                    <img src="images/t4.jpg" class="img-fluid" alt="">
+                    <div class="caption">
+                        <div class="team-text">
+                            <h4>Rojo Poy</h4>
+                        </div>
+                        <ul>
+                            <li class="f1">
+                                <a href="#">
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                            </li>
+                            <li class="f2">
+                                <a href="#">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                            </li>
+                            <li class="f3">
+                                <a href="#">
+                                    <span class="fa fa-google-plus"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //team -->
+
+    <!-- testimonials -->
+    <div class="testimonials py-5 bg-li" id="testi">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="tittle text-center mb-sm-5 mb-4">What Our People Say</h3>
+            <div class="row pt-4">
+                <div class="col-lg-4 testi-sections mb-4">
+                    <div class="testimonials_grid">
+                        <p class="sub-test">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                            impedit. Cras ultricies
+                            diam sit amet.
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col-3 testi-img-res text-lg-left text-right">
+                                <img src="images/te1.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="col-7 testi_grid">
+                                <h5>Petey Cruis</h5>
+                                <p>Sub heading</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 testi-sections mb-4">
+                    <div class="testimonials_grid">
+                        <p class="sub-test">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                            impedit. Cras ultricies
+                            diam sit amet.
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col-3 testi-img-res text-lg-left text-right">
+                                <img src="images/te2.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="col-7 testi_grid">
+                                <h5>Molive Joe</h5>
+                                <p>Sub heading</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 testi-sections mb-4">
+                    <div class="testimonials_grid">
+                        <p class="sub-test">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                            impedit. Cras ultricies
+                            diam sit amet.
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col-3 testi-img-res text-lg-left text-right">
+                                <img src="images/te3.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="col-7 testi_grid">
+                                <h5>Paige Turner</h5>
+                                <p>Sub heading</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //testimonials -->
+
+    <!-- more -->
+    <section class="blog_w3ls py-5" id="more">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="tittle mb-sm-5 mb-4">You may also like</h3>
+            <div class="row">
+                <!-- blog grid -->
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <div class="med-blog">
+                        <div class="blog-header">
+                            <a href="blog1.html">
+                                <img class="img-fluid" src="images/blog1.jpg" alt="image">
+                            </a>
+                        </div>
+                        <div class="blog-body bg-wh p-4">
+                            <span>March 12, 2019 - loremipsum</span>
+                            <a href="blog1.html" class="blog-title">Dictum porta auris magna umgtdd fos</a>
+                            <p>Cras ultricies ligula sed magna dictum portaout auris blandita. Nulla viverra pharetra
+                                se.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog grid -->
+                <!-- blog grid -->
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <div class="med-blog">
+                        <div class="blog-header">
+                            <a href="blog2.html">
+                                <img class="img-fluid" src="images/blog2.jpg" alt="image">
+                            </a>
+                        </div>
+                        <div class="blog-body bg-wh p-4">
+                            <span>March 14, 2019 - pharetra</span>
+                            <a href="blog2.html" class="blog-title">Quis autem vel eum iure reprehdd ende</a>
+                            <p>Cras ultricies ligula sed magna dictum portaout auris blandita. Nulla viverra pharetra
+                                se.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog grid -->
+                <!-- blog grid -->
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <div class="med-blog">
+                        <div class="blog-header">
+                            <a href="blog4.html">
+                                <img class="img-fluid" src="images/blog3.jpg" alt="image">
+                            </a>
+                        </div>
+                        <div class="blog-body bg-wh p-4">
+                            <span>March 16, 2019 - portaout</span>
+                            <a href="blog4.html" class="blog-title">Suscipit labo iosam nisi ut aliquid</a>
+                            <p>Cras ultricies ligula sed magna dictum portaout auris blandita. Nulla viverra pharetra
+                                se.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog grid -->
+            </div>
+        </div>
+    </section>
+    <!-- //more -->
 @endsection
 
