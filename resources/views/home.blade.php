@@ -27,7 +27,7 @@
                     <p class="my-4">Just look for them in shops or stores and make your best outfit.</p>
                 <p>Pursue the future.</p>
                 <h3 class="my-4">
-                    <a href="blog1.html" class="single-text text-bl">Nemo enim ipsam voluptatem quia 2019</a>
+                    <a href="blog1.html" class="single-text text-bl">New threads 2019</a>
                 </h3>
                 <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
                     <p class="my-3">Just look for them in shops or stores and make your best outfit.</p>
@@ -51,71 +51,31 @@
                 <p>Innovation, imagination and creativity.
                 </p>
                 <h3 class="my-4">
-                    <a href="blog2.html" class="text-bl font-weight-bold blog-grid-title mt-4 mb-3">Two Column Text
-                        Sample</a>
+                    <a href="blog2.html" class="text-bl font-weight-bold blog-grid-title mt-4 mb-3">Modern Pillows</a>
                 </h3>
                 <div class="row">
                     <div class="col-md-6">
-                        <p>Morbi eget dui elit in lectus eros, convallis vel dolor vitae, semper sodales risus. Donec
-                            convallis maximus neque
-                            vel cursus.</p>
+                        <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
                     </div>
                     <div class="col-md-6">
-                        <p>In lectus eros, convallis vel dolor vitae, semper sodales risus. Donec
-                            convallis maximus neque
-                            vel cursus.</p>
+                        <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
                     </div>
                 </div>
-                <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor
-                    incididunt ut
-                    labore et
-                    dolore magna
-                    aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea
-                    commodo
-                    consequat
-                    duis
-                    aute irudre dolor in elit sed uta labore dolore reprehender</p>
+                <p class="my-3">Just look for them in shops or stores and make your best outfit.</p>
             </div>
             <div class="quote">
                 <p class="text-wh">
-                    <span class="fa fa-quote-left"></span> Consetetur sadipscing elitr, sed diam nonumy eirmod
-                    tempor
-                    invidunt ut labore et dolore magna aliquyam erat,
-                    sed diam voluptua. Ullamco labor nisi ut aliquip exea commodo consequat duis Ullamco labor nisi ut
-                    aliquip exea
-                    commodo consequat duis Ullamco labor nisi ut aliquip exea commodo consequat duis.
+                    <span class="fa fa-quote-left"></span> You are more than what you think you are. Your brain is your power to create.
                     <span class="fa fa-quote-right"></span>
                 </p>
             </div>
             <div class="top-cont px-lg-5">
                 <h3 class="my-4">
-                    <a href="blog4.html" class="single-text text-bl">illo quasi architi ecto. Uti Nemo enim ipsam
-                        voluptatem quia 2019</a>
+                    <a href="blog3.html" class="single-text text-bl">New Pillow colors 2019</a>
                 </h3>
-                <p class="my-4">Suspendisse nec diam sit amet mauris bibendum sollicitudin. In libero nunc, feugiat
-                    laoreet nisi
-                    ac, rutrum venenatis felis. Donec at elit ullamcorper, pretium ligula ac.</p>
-                <p>Sed ut perspiciatis unde omnis natus error dolor volup tatem ed accusantium doloremque laudantium,
-                    eaqu ipsa
-                    quae
-                    ab illo quasi architi ecto. Uti perspiciatis unde dolor sed sit quae ab illo eaqu ipsa quae ab illo
-                    quasi
-                    architi.Sit amet mattis quam, sit amet excepteur sint occaecat cupidatat.</p>
-                <h3 class="my-4">
-                    <a href="blog3.html" class="single-text text-bl">Nemo enim ipsam voluptatem quia 2019</a>
-                </h3>
-                <p>Ullamco labor nisi ut aliquip exea commodo consequat duis aute irudre dolor in elit sed uta
-                    labore dolore reprehender Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor
-                    incididunt ut
-                    labore et
-                    dolore magna
-                    aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea
-                    commodo
-                    consequat
-                    duis
-                    aute irudre dolor in elit sed uta labore dolore reprehender</p>
-                <img class="img-fluid mt-5" src="{!! asset('images/m2.jpeg') !!}" alt="">
+                <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
+                <p class="mt-3">Just look for them in shops or stores and make your best outfit.</p>
+                <img class="img-fluid mt-5" src="{!! asset('images/m2.jpg') !!}" alt="">
             </div>
         </div>
     </section>
@@ -128,9 +88,7 @@
             <div class="row pt-4">
                 <div class="col-lg-4 testi-sections mb-4">
                     <div class="testimonials_grid">
-                        <p class="sub-test">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                            impedit. Cras ultricies
-                            diam sit amet.
+                        <p class="sub-test">At first i thought its hard but it wasn't, simple you just have to be with passion and creative mind.
                         </p>
                         <div class="row mt-5">
                             <div class="col-3 testi-img-res text-lg-left text-right">
@@ -138,16 +96,14 @@
                             </div>
                             <div class="col-7 testi_grid">
                                 <h5>Petey Cruis</h5>
-                                <p>Sub heading</p>
+                                <p>Blogger</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 testi-sections mb-4">
                     <div class="testimonials_grid">
-                        <p class="sub-test">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                            impedit. Cras ultricies
-                            diam sit amet.
+                        <p class="sub-test">At first i thought its hard but it wasn't, simple you just have to be with passion and creative mind.
                         </p>
                         <div class="row mt-5">
                             <div class="col-3 testi-img-res text-lg-left text-right">
@@ -155,16 +111,14 @@
                             </div>
                             <div class="col-7 testi_grid">
                                 <h5>Molive Joe</h5>
-                                <p>Sub heading</p>
+                                <p>Photographer</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 testi-sections mb-4">
                     <div class="testimonials_grid">
-                        <p class="sub-test">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                            impedit. Cras ultricies
-                            diam sit amet.
+                        <p class="sub-test">At first i thought its hard but it wasn't, simple you just have to be with passion and creative mind.
                         </p>
                         <div class="row mt-5">
                             <div class="col-3 testi-img-res text-lg-left text-right">
@@ -172,7 +126,7 @@
                             </div>
                             <div class="col-7 testi_grid">
                                 <h5>Paige Turner</h5>
-                                <p>Sub heading</p>
+                                <p>Poet</p>
                             </div>
                         </div>
                     </div>
@@ -196,10 +150,9 @@
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
-                            <span>March 12, 2019 - loremipsum</span>
-                            <a href="blog1.html" class="blog-title">Dictum porta auris magna umgtdd fos</a>
-                            <p>Cras ultricies ligula sed magna dictum portaout auris blandita. Nulla viverra pharetra
-                                se.</p>
+                            <span>March 12, 2019 - Step by step</span>
+                            <a href="blog1.html" class="blog-title">Imagine, Create and develop</a>
+                            <p>We are doing this together using tutorials</p>
                         </div>
                     </div>
                 </div>
@@ -213,10 +166,9 @@
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
-                            <span>March 14, 2019 - pharetra</span>
-                            <a href="blog2.html" class="blog-title">Quis autem vel eum iure reprehdd ende</a>
-                            <p>Cras ultricies ligula sed magna dictum portaout auris blandita. Nulla viverra pharetra
-                                se.</p>
+                            <span>March 14, 2019 - Beginners</span>
+                            <a href="blog2.html" class="blog-title">Imagine, Create and develop</a>
+                            <p>We are doing this together using tutorials.</p>
                         </div>
                     </div>
                 </div>
@@ -230,10 +182,9 @@
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
-                            <span>March 16, 2019 - portaout</span>
-                            <a href="blog4.html" class="blog-title">Suscipit labo iosam nisi ut aliquid</a>
-                            <p>Cras ultricies ligula sed magna dictum portaout auris blandita. Nulla viverra pharetra
-                                se.</p>
+                            <span>March 16, 2019 - More</span>
+                            <a href="blog4.html" class="blog-title">Imagine, Create and develop/a>
+                            <p>We are doing this together using tutorials.</p>
                         </div>
                     </div>
                 </div>
