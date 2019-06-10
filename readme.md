@@ -1,4 +1,4 @@
-# DIY CRAFT WEBSITE Project in Django
+# DIY CRAFT Website Project in php Laravel
 
 This site is teaching people how to make things out of the many things they have around them.
 
