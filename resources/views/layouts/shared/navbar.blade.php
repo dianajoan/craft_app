@@ -19,10 +19,10 @@
                                 <li><a href="{{ route('about') }}" class="nav-style">About Us</a></li>
                                 <li>
                                     <!-- First Tier Drop Down -->
-                                    <label for="drop-2" class="toggle toogle-2 nav-style">Dropdown <span
+                                    <label for="drop-2" class="toggle toogle-2 nav-style">Blog <span
                                             class="fa fa-angle-down" aria-hidden="true"></span>
                                     </label>
-                                    <a href="#" class="nav-style">Dropdown <span class="fa fa-angle-down"
+                                    <a href="#" class="nav-style">Blog <span class="fa fa-angle-down"
                                             aria-hidden="true"></span></a>
                                     <input type="checkbox" id="drop-2" />
                                     <ul>
