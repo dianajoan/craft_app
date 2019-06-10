@@ -4,95 +4,14 @@
 @section('content')
 
 <!-- banner -->
-        <div class="banner_w3lspvt">
-            <div class="csslider infinity" id="slider1">
-                <input type="radio" name="slides" checked="checked" id="slides_1" />
-                <input type="radio" name="slides" id="slides_2" />
-                <ul class="banner_slide_bg">
-                    <li class="slider-style">
-                        <div class="container-fluid">
-                            <div class="w3ls_banner_txt">
-                                <p class="text-uppercase">W3layouts Designs</p>
-                                <h3 class="w3ls_pvt-title text-wh let mb-3">I am a Craft Blog Website Theme</h3>
-                                <!-- rated icons -->
-                                <div class="rating-w3 mt-5 pt-5">
-                                    <ul class="list-unstyled">
-                                        <li class="text-wh mr-4 let">Most Rated :</li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="fa fa-star"></span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="fa fa-star"></span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="fa fa-star"></span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="fa fa-star"></span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="fa fa-star"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- //rated icons -->
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slider-style">
-                        <div class="container-fluid">
-                            <div class="w3ls_banner_txt">
-                                <p class="text-uppercase">W3layouts Designs</p>
-                                <h3 class="w3ls_pvt-title text-wh let mb-3">Most Complete Food Blog Theme</h3>
-                                <!-- rated icons -->
-                                <div class="rating-w3 mt-5 pt-5">
-                                    <ul class="list-unstyled">
-                                        <li class="text-wh mr-4 let">Most Rated :</li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="fa fa-star"></span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="fa fa-star"></span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="fa fa-star"></span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="fa fa-star"></span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="fa fa-star"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- //rated icons -->
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="arrows">
-                    <label for="slides_1"></label>
-                    <label for="slides_2"></label>
+        <div class="banner_w3lspvt-2">
+            <div class="container">
+                <div class="d-flex style-w3layouts">
+                    <h4 class="inner-style-w3pvts mr-auto text-wh text-uppercase">Home</h4>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page">Welcome to creativity</li>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -104,35 +23,14 @@
     <section class="bottom-w3pvt py-5">
         <div class="container py-xl-5 py-lg-3">
             <div class="top-cont px-lg-5">
-                <p>Aenean et leo non sem blandit venenatis nec sed justo. Sed sollicitudin porta est nec dictum. Proin
-                    tristique,
-                    erat vitae efficitur vehicula, lorem enim maximus quam, nec bibendum nisi lacus in mi. Sed at urna
-                    mattis. Nam
-                    commodo lacinia tellus, eget hendrerit nibh luctus sit amet. Aenean
-                    feugiat dapibus orci, imperdiet sed.</p>
-                <p class="my-4">Suspendisse nec diam sit amet mauris bibendum sollicitudin. In libero nunc, feugiat
-                    laoreet nisi
-                    ac, rutrum venenatis felis. Donec at elit ullamcorper, pretium ligula ac.</p>
-                <p>Sed ut perspiciatis unde omnis natus error dolor volup tatem ed accusantium doloremque laudantium,
-                    eaqu ipsa
-                    quae
-                    ab illo quasi architi ecto. Uti perspiciatis unde dolor sed sit quae ab illo eaqu ipsa quae ab illo
-                    quasi
-                    architi.Sit amet mattis quam, sit amet excepteur sint occaecat cupidatat.</p>
+                <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
+                    <p class="my-4">Just look for them in shops or stores and make your best outfit.</p>
+                <p>Pursue the future.</p>
                 <h3 class="my-4">
                     <a href="blog1.html" class="single-text text-bl">Nemo enim ipsam voluptatem quia 2019</a>
                 </h3>
-                <p>Ullamco labor nisi ut aliquip exea commodo consequat duis aute irudre dolor in elit sed uta
-                    labore dolore reprehender Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor
-                    incididunt ut
-                    labore et
-                    dolore magna
-                    aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea
-                    commodo
-                    consequat
-                    duis
-                    aute irudre dolor in elit sed uta labore dolore reprehender</p>
+                <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
+                    <p class="my-3">Just look for them in shops or stores and make your best outfit.</p>
             </div>
             <!-- middle section 1 -->
             <section class="row middle-2 py-lg-5 py-4">
@@ -141,33 +39,16 @@
                 </div>
                 <div class="col-lg-5 who-left-w3pvt mt-lg-0 mt-4">
                     <h3 class="w3ls-title font-weight-bold text-da mb-4">
-                        Unique Food Blog Website Theme.</h3>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud
-                        exercitation.</p>
-                    <p class="mt-3">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                        laboriosam, nisi
-                        ut
-                        aliquid ex ea..</p>
+                        Unique crochet threads.</h3>
+                    <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
+                    <p class="mt-3">Just look for them in shops or stores and make your best outfit.</p>
                 </div>
             </section>
             <!-- //middle section 1 -->
             <div class="top-cont px-lg-5">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna
-                    aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea
-                    commodo
-                    consequat
-                    duis
-                    aute irudre dolor in elit sed uta labore dolore reprehender</p>
-                <p class="my-3">Ullamco labor nisi ut aliquip exea commodo consequat duis aute irudre dolor in elit sed
-                    uta
-                    labore dolore reprehender</p>
-                <p>Jabore et dolore magna aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi
-                    utaliquip
-                    exea commodo consequat duis aute irudre dolor in elit sed uta labore dolore
-                    reprehender.
+                <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
+                    <p class="my-3">Just look for them in shops or stores and make your best outfit.</p>
+                <p>Innovation, imagination and creativity.
                 </p>
                 <h3 class="my-4">
                     <a href="blog2.html" class="text-bl font-weight-bold blog-grid-title mt-4 mb-3">Two Column Text
@@ -234,7 +115,7 @@
                     consequat
                     duis
                     aute irudre dolor in elit sed uta labore dolore reprehender</p>
-                <img class="img-fluid mt-5" src="{!! asset('images/m2.jpg') !!}" alt="">
+                <img class="img-fluid mt-5" src="{!! asset('images/m2.jpeg') !!}" alt="">
             </div>
         </div>
     </section>

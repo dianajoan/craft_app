@@ -9,7 +9,7 @@
                 <div class="d-flex style-w3layouts">
                     <h4 class="inner-style-w3pvts mr-auto text-wh text-uppercase">Contact Us</h4>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                         <li class="breadcrumb-item" aria-current="page">Contact Page</li>
                     </ol>
                 </div>

@@ -26,20 +26,19 @@
                                             aria-hidden="true"></span></a>
                                     <input type="checkbox" id="drop-2" />
                                     <ul>
-                                        <li><a href="blog1.html" class="drop-text">Creative Blog</a></li>
-                                        <li><a href="blog2.html" class="drop-text">Sidebar Right</a></li>
-                                        <li><a href="blog3.html" class="drop-text">Sidebar Left</a></li>
+                                        <li><a href="blog1.html" class="drop-text">Crochet</a></li>
+                                        <li><a href="blog2.html" class="drop-text">Stitches</a></li>
+                                        <li><a href="blog3.html" class="drop-text">Blankets & Sweaters</a></li>
                                         <li><a href="blog4.html" class="drop-text">Standard</a></li>
-                                        <li><a href="single.html" class="drop-text">Blog Details</a></li>
+                                        <li><a href="single.html" class="drop-text">Videos</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="{{ route('contact') }}" class="nav-style">Contact Us</a></li>
-                                <li><a href="https://w3layouts.com/" target="_blank" class="nav-button">Get Started</a></li>
 
                                 <!-- Authentication Links -->
                                 @if (Auth::guest())
-                                    <li><a href="{{ route('login') }}">Login</a></li>
-                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                    <li><a href="{{ route('login') }}" target="_blank" class="nav-button">Login</a></li>
+                                    <li><a href="{{ route('register') }}" target="_blank" class="nav-button">Register</a></li>
                                 @else
 
                                     <!-- First Tier Drop Down -->

@@ -8,7 +8,7 @@
                 <div class="d-flex style-w3layouts">
                     <h4 class="inner-style-w3pvts mr-auto text-wh text-uppercase">About Us</h4>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                         <li class="breadcrumb-item" aria-current="page">About Page</li>
                     </ol>
                 </div>
@@ -23,7 +23,7 @@
         <div class="container py-xl-5 py-lg-3">
             <div class="row about-main py-3">
                 <div class="col-lg-5 about-text-grid pr-xl-5">
-                    <h3 class="main-title-w3pvt text-uppercase">First we eat, then we do everything else.</h3>
+                    <h3 class="main-title-w3pvt text-uppercase">First we imagine, then we do everything else.</h3>
                     <hr>
                     <p class="mt-4">Nam venenatis neque tellus, vel sagittis lacus placerat sit amet. Morbi tristique
                         consequat mi,
