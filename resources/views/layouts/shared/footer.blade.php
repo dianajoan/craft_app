@@ -19,11 +19,11 @@
 								<a href="{{ route('about') }}">About Us</a>
 							</li>
 							<li>
-								<a href="blog1.html">Blog Style 1</a>
+								<a href="{{ route('blog') }}">Crochet</a>
 							</li>
-							<li>
-								<a href="blog2.html">Blog style 2</a>
-							</li>
+                            <li>
+                            	<a href="{{ route('blog') }}">Stitches</a>
+                            </li>
 							<li>
 								<a class="btn-footer" href="{{ route('contact') }}">Contact Us</a>
 							</li>
