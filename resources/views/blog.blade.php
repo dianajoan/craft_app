@@ -9,7 +9,7 @@
 				<div class="d-flex style-w3layouts">
 					<h4 class="inner-style-w3pvts mr-auto text-wh text-uppercase">Blog</h4>
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+						<li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
 						<li class="breadcrumb-item" aria-current="page">Blog</li>
 					</ol>
 				</div>
@@ -42,7 +42,7 @@
 							</div>
 							<div class="blog-grid-right">
 								<h5>
-									<a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
+									<a href="single.html">Imagine, Create and develop</a>
 								</h5>
 							</div>
 							<div class="clearfix"> </div>
@@ -55,7 +55,7 @@
 							</div>
 							<div class="blog-grid-right">
 								<h5>
-									<a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
+									<a href="single.html">Imagine, Create and develop</a>
 								</h5>
 							</div>
 							<div class="clearfix"> </div>
@@ -68,7 +68,7 @@
 							</div>
 							<div class="blog-grid-right">
 								<h5>
-									<a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
+									<a href="single.html">Imagine, Create and develop</a>
 								</h5>
 							</div>
 							<div class="clearfix"> </div>
@@ -94,9 +94,8 @@
 							<h4><a href="single.html">Heading here</a></h4>
 							<span class="let mt-3">Feb 20, 2019</span>
 							<hr>
-							<p>Neque porro est Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor. no sea
-								takimata sanctus est Loremipsum.</p>
-							<a class="btn button-style-w3ls mt-4" href="single.html">Read More</a>
+							<p>Imagine, Create and develop.</p>
+							<a class="btn button-style-w3ls mt-4" href="{{ route('blog') }}">Read More</a>
 						</div>
 					</div>
 					<div class="creatives-grid">
@@ -107,9 +106,8 @@
 							<h4><a href="single.html">Heading here</a></h4>
 							<span class="let mt-3">Feb 20, 2019</span>
 							<hr>
-							<p>Neque porro est Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor. no sea
-								takimata sanctus est Loremipsum.</p>
-							<a class="btn button-style-w3ls mt-4" href="single.html">Read More</a>
+							<p>Imagine, Create and develop.</p>
+							<a class="btn button-style-w3ls mt-4" href="{{ route('blog') }}">Read More</a>
 						</div>
 					</div>
 					<div class="creatives-grid">
@@ -120,9 +118,8 @@
 							<h4><a href="single.html">Heading here</a></h4>
 							<span class="let mt-3">Feb 20, 2019</span>
 							<hr>
-							<p>Neque porro est Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor. no sea
-								takimata sanctus est Loremipsum.</p>
-							<a class="btn button-style-w3ls mt-4" href="single.html">Read More</a>
+							<p>Imagine, Create and develop.</p>
+							<a class="btn button-style-w3ls mt-4" href="{{ route('blog') }}">Read More</a>
 						</div>
 					</div>
 					<nav aria-label="Page navigation example">
@@ -131,19 +128,19 @@
 								<a class="page-link" href="#">Previous</a>
 							</li>
 							<li class="page-item">
-								<a class="page-link" href="blog1.html">1</a>
+								<a class="page-link" href="{{ route('blog') }}">1</a>
 							</li>
 							<li class="page-item">
-								<a class="page-link" href="blog2.html">2</a>
+								<a class="page-link" href="{{ route('blog') }}">2</a>
 							</li>
 							<li class="page-item">
-								<a class="page-link" href="blog3.html">3</a>
+								<a class="page-link" href="{{ route('blog') }}">3</a>
 							</li>
 							<li class="page-item">
-								<a class="page-link" href="blog4.html">4</a>
+								<a class="page-link" href="{{ route('blog') }}">4</a>
 							</li>
 							<li class="page-item">
-								<a class="page-link" href="blog4.html">Next</a>
+								<a class="page-link" href="{{ route('blog') }}">Next</a>
 							</li>
 						</ul>
 					</nav>
