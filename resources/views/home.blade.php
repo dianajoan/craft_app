@@ -146,7 +146,7 @@
                     <div class="med-blog">
                         <div class="blog-header">
                             <a href="blog1.html">
-                                <img class="img-fluid" src="{!! asset('images/blog1.jpg') !!}" alt="image">
+                                <img class="img-fluid" src="{!! asset('images/blog1.jpg') !!}" style="width:400px; height: 300px;" alt="image">
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
@@ -162,7 +162,7 @@
                     <div class="med-blog">
                         <div class="blog-header">
                             <a href="blog2.html">
-                                <img class="img-fluid" src="{!! asset('images/blog2.jpg') !!}" alt="image">
+                                <img class="img-fluid" src="{!! asset('images/blog2.jpg') !!}" style="width:400px; height: 300px;" alt="image">
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
@@ -178,12 +178,12 @@
                     <div class="med-blog">
                         <div class="blog-header">
                             <a href="blog4.html">
-                                <img class="img-fluid" src="{!! asset('images/blog3.jpg') !!}" alt="image">
+                                <img class="img-fluid" src="{!! asset('images/blog3.jpg') !!}" style="width:400px; height: 300px;" alt="image">
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
                             <span>March 16, 2019 - More</span>
-                            <a href="blog4.html" class="blog-title">Imagine, Create and develop/a>
+                            <a href="blog4.html" class="blog-title">Imagine, Create and develop</a>
                             <p>We are doing this together using tutorials.</p>
                         </div>
                     </div>
