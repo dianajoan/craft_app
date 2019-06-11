@@ -34,8 +34,8 @@
                         </div>
                         <div class="col-md-9 col-sm-10 col-9 contact-text-w3pvt-webinf0">
                             <h4>Visit us</h4>
-                            <p>Parma Via Modena,BO, Italy</p>
-                            <p>Lorem ipsum dolor.</p>
+                            <p>Kampala, Uganda</p>
+                            <p>Making your imagination to Future.</p>
                         </div>
                     </div>
                     <div class="row mb-4 pb-3">

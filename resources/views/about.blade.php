@@ -40,6 +40,42 @@
     </section>
     <!-- //about -->
 
+    <!-- services -->
+    <div class="serives-w3pvt-web py-5" id="services">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="row support-bottom text-center py-5">
+                <div class="col-lg-4">
+                    <div class="services-w3ls-grid">
+                        <div class="serv-icon mx-auto">
+                            <span class="fa fa-book"></span>
+                        </div>
+                        <h4 class="text-wh mt-md-4 mt-3 mb-3">Stitches</h4>
+                        <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-lg-0 mt-4">
+                    <div class="services-w3ls-grid">
+                        <div class="serv-icon clr-2 mx-auto">
+                            <span class="fa fa-pencil"></span>
+                        </div>
+                        <h4 class="text-wh mt-md-4 mt-3 mb-3">Crochet</h4>
+                        <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-lg-0 mt-4">
+                    <div class="services-w3ls-grid">
+                        <div class="serv-icon clr-3 mx-auto">
+                            <span class="fa fa-pencil"></span>
+                        </div>
+                        <h4 class="text-wh mt-md-4 mt-3 mb-3">Blankets</h4>
+                        <p>These are a most of them which are used by many people to create a blanket, sweaters or scalfs as well.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //services -->
+
     <!-- team -->
     <div class="team text-center py-5">
         <div class="container py-xl-5 py-lg-3">
