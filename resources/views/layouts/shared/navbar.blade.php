@@ -26,11 +26,11 @@
                                             aria-hidden="true"></span></a>
                                     <input type="checkbox" id="drop-2" />
                                     <ul>
-                                        <li><a href="blog1.html" class="drop-text">Crochet</a></li>
-                                        <li><a href="blog2.html" class="drop-text">Stitches</a></li>
-                                        <li><a href="blog3.html" class="drop-text">Blankets & Sweaters</a></li>
-                                        <li><a href="blog4.html" class="drop-text">Standard</a></li>
-                                        <li><a href="single.html" class="drop-text">Videos</a></li>
+                                        <li><a href="{{ route('blog') }}" class="drop-text">Crochet</a></li>
+                                        <li><a href="{{ route('blog') }}" class="drop-text">Stitches</a></li>
+                                        <li><a href="{{ route('blog') }}" class="drop-text">Blankets & Sweaters</a></li>
+                                        <li><a href="{{ route('blog') }}" class="drop-text">Standard</a></li>
+                                        <li><a href="{{ route('blog') }}" class="drop-text">Videos</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="{{ route('contact') }}" class="nav-style">Contact Us</a></li>
@@ -42,10 +42,10 @@
                                 @else
 
                                     <!-- First Tier Drop Down -->
-                                    <label for="drop-2" class="toggle toogle-2 nav-style">Dropdown <span
+                                    <label for="drop-2" class="toggle toogle-2 nav-style">Blog <span
                                             class="fa fa-angle-down" aria-hidden="true"></span>
                                     </label>
-                                    <a href="#" class="nav-style">Dropdown <span class="fa fa-angle-down"
+                                    <a href="#" class="nav-style">Blog <span class="fa fa-angle-down"
                                             aria-hidden="true"></span></a>
                                     <input type="checkbox" id="drop-2" />
                                     <ul>
