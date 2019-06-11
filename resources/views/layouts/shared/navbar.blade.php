@@ -40,15 +40,25 @@
                                     <li><a href="{{ route('register') }}" target="_blank" class="nav-button">Register</a></li>
                                 @else
                                 <li>
-                                    <a href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
+                                    <!-- First Tier Drop Down -->
+                                    <label for="drop-2" class="toggle toogle-2 nav-style"><span
+                                            class="fa fa-angle-down" aria-hidden="true"></span>
+                                    </label>
+                                    <a href="#" class="nav-style">{{ Auth::user()->name }}<span class="fa fa-angle-down"
+                                            aria-hidden="true"></span></a>
+                                    <input type="checkbox" id="drop-2" />
+                                    <ul>
+                                        <li>
+                                            <a class="drop-text" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </li>
+                                    </ul>
                                 </li>
                                 @endif
                             </ul>
