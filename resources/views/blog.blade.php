@@ -63,7 +63,7 @@
 						<div class="blog-grids mt-4">
 							<div class="blog-grid-left">
 								<a href="single.html">
-									<img src="{!! asset('images/bb7.jpg') !!}" class="img-fluid" alt="">
+									<img src="{!! asset('images/bb7.jpeg') !!}" class="img-fluid" alt="">
 								</a>
 							</div>
 							<div class="blog-grid-right">
@@ -77,18 +77,18 @@
 					<div class="single-gd">
 						<h4>List group</h4>
 						<ul class="list-group">
-							<li class="list-group-item active">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Morbi leo risus</li>
-							<li class="list-group-item">Porta ac consectetur ac</li>
-							<li class="list-group-item">Vestibulum at eros</li>
+							<li class="list-group-item active">Crochets</li>
+							<li class="list-group-item">Stitches</li>
+							<li class="list-group-item">Blankets</li>
+							<li class="list-group-item">Sweaters</li>
+							<li class="list-group-item">Videos</li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-8 blog-left-content mt-lg-0 mt-5">
 					<div class="creatives-grid">
 						<a href="single.html">
-							<img src="{!! asset('images/bb2.jpg') !!}" alt=" " class="img-fluid" />
+							<img src="{!! asset('images/bb2.jpg') !!}" alt=" " style="width:750px; height: 500px;" class="img-fluid" />
 						</a>
 						<div class="p-mask img-thumbnail">
 							<h4><a href="single.html">Heading here</a></h4>
@@ -101,7 +101,7 @@
 					</div>
 					<div class="creatives-grid">
 						<a href="single.html">
-							<img src="{!! asset('images/bb1.jpg') !!}" alt=" " class="img-fluid" />
+							<img src="{!! asset('images/bb1.jpg') !!}" alt=" " style="width:750px; height: 500px;" class="img-fluid" />
 						</a>
 						<div class="p-mask img-thumbnail">
 							<h4><a href="single.html">Heading here</a></h4>
@@ -114,7 +114,7 @@
 					</div>
 					<div class="creatives-grid">
 						<a href="single.html">
-							<img src="{!! asset('images/bb3.jpeg') !!}" alt=" " class="img-fluid" />
+							<img src="{!! asset('images/bb3.jpeg') !!}" alt=" " style="width:750px; height: 500px;" class="img-fluid" />
 						</a>
 						<div class="p-mask img-thumbnail">
 							<h4><a href="single.html">Heading here</a></h4>
@@ -163,7 +163,7 @@
                     <div class="med-blog">
                         <div class="blog-header">
                             <a href="blog1.html">
-                                <img class="img-fluid" src="{!! asset('images/blog1.jpg') !!}" alt="image">
+                                <img class="img-fluid" src="{!! asset('images/blog1.jpg') !!}" style="width:400px; height: 300px;" alt="image">
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
@@ -179,7 +179,7 @@
                     <div class="med-blog">
                         <div class="blog-header">
                             <a href="blog2.html">
-                                <img class="img-fluid" src="{!! asset('images/blog2.jpg') !!}" alt="image">
+                                <img class="img-fluid" src="{!! asset('images/blog2.jpg') !!}" style="width:400px; height: 300px;" alt="image">
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
@@ -195,12 +195,12 @@
                     <div class="med-blog">
                         <div class="blog-header">
                             <a href="blog4.html">
-                                <img class="img-fluid" src="{!! asset('images/blog3.jpg') !!}" alt="image">
+                                <img class="img-fluid" src="{!! asset('images/blog3.jpg') !!}" style="width:400px; height: 300px;" alt="image">
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
                             <span>March 16, 2019 - More</span>
-                            <a href="blog4.html" class="blog-title">Imagine, Create and develop/a>
+                            <a href="blog4.html" class="blog-title">Imagine, Create and develop</a>
                             <p>We are doing this together using tutorials.</p>
                         </div>
                     </div>
