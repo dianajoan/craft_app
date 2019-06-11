@@ -49,7 +49,7 @@
                         <a class="btn btn-link" href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>                
                 </form>
                 <p class="account">By clicking login, you agree to our <a href="#">Terms & Conditions!</a></p>
-                <p class="account1">Dont have an account? <a href="#">Register here</a></p>
+                <p class="account1">Dont have an account? <a href="{{ route('register') }}">Register here</a></p>
             </div>
         </div>
         <!-- //main content -->
