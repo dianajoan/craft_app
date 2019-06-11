@@ -29,7 +29,6 @@
                                         <li><a href="{{ route('blog') }}" class="drop-text">Crochet</a></li>
                                         <li><a href="{{ route('blog') }}" class="drop-text">Stitches</a></li>
                                         <li><a href="{{ route('blog') }}" class="drop-text">Blankets & Sweaters</a></li>
-                                        <li><a href="{{ route('blog') }}" class="drop-text">Standard</a></li>
                                         <li><a href="{{ route('blog') }}" class="drop-text">Videos</a></li>
                                     </ul>
                                 </li>
