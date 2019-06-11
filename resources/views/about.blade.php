@@ -30,10 +30,10 @@
                     <a href="{{ route('about') }}" class="button-style-w3ls btn mt-sm-5 mt-4">View More</a>
                 </div>
                 <div class="col-lg-3 col-sm-5 about-right mt-lg-0 mt-5">
-                    <img src="{!! asset('images/a2.jpg') !!}" class="img-fluid" alt="" />
+                    <img src="{!! asset('images/a2.jpg') !!}" class="img-fluid" style="width:400px; height: 300px;" alt="" />
                 </div>
                 <div class="col-lg-4 col-sm-7 mt-lg-0 mt-5 about-right">
-                    <img src="{!! asset('images/a1.jpg') !!}" class="img-fluid" alt="" />
+                    <img src="{!! asset('images/a1.jpeg') !!}" style="width:400px; height: 300px;" class="img-fluid" alt="" />
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
             <h3 class="tittle text-center mb-sm-5 mb-4">Our Team</h3>
             <div class="row team-bottom pt-4">
                 <div class="col-lg-3 col-sm-6 team-grid">
-                    <img src="{!! asset('images/t1.jpeg') !!}" class="img-fluid" alt="">
+                    <img src="{!! asset('images/t1.jpeg') !!}" style="width:400px; height: 300px;" class="img-fluid" alt="">
                     <div class="caption">
                         <div class="team-text">
                             <h4>Mack Joe</h4>
@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 team-grid mt-sm-0 mt-5">
-                    <img src="{!! asset('images/t3.jpeg') !!}" class="img-fluid" alt="">
+                    <img src="{!! asset('images/t3.jpeg') !!}" style="width:400px; height: 300px;" class="img-fluid" alt="">
                     <div class="caption">
                         <div class="team-text">
                             <h4>Cruz Deo</h4>
@@ -132,7 +132,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 team-grid mt-lg-0 mt-5">
-                    <img src="{!! asset('images/t2.jpg') !!}" class="img-fluid" alt="">
+                    <img src="{!! asset('images/t2.jpg') !!}" style="width:400px; height: 300px;" class="img-fluid" alt="">
                     <div class="caption">
                         <div class="team-text">
                             <h4>Rochy Jae</h4>
@@ -157,7 +157,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 team-grid  mt-lg-0 mt-5">
-                    <img src="{!! asset('images/t4.jpg') !!}" class="img-fluid" alt="">
+                    <img src="{!! asset('images/t4.jpg') !!}" style="width:400px; height: 300px;" class="img-fluid" alt="">
                     <div class="caption">
                         <div class="team-text">
                             <h4>Rojo Poy</h4>
@@ -251,7 +251,7 @@
                     <div class="med-blog">
                         <div class="blog-header">
                             <a href="blog1.html">
-                                <img class="img-fluid" src="{!! asset('images/blog1.jpg') !!}" alt="image">
+                                <img class="img-fluid" src="{!! asset('images/blog1.jpg') !!}" style="width:400px; height: 300px;" alt="image">
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
@@ -267,7 +267,7 @@
                     <div class="med-blog">
                         <div class="blog-header">
                             <a href="blog2.html">
-                                <img class="img-fluid" src="{!! asset('images/blog2.jpg') !!}" alt="image">
+                                <img class="img-fluid" src="{!! asset('images/blog2.jpg') !!}" style="width:400px; height: 300px;" alt="image">
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
@@ -283,12 +283,12 @@
                     <div class="med-blog">
                         <div class="blog-header">
                             <a href="blog4.html">
-                                <img class="img-fluid" src="{!! asset('images/blog3.jpg') !!}" alt="image">
+                                <img class="img-fluid" src="{!! asset('images/blog3.jpg') !!}" style="width:400px; height: 300px;" alt="image">
                             </a>
                         </div>
                         <div class="blog-body bg-wh p-4">
                             <span>March 16, 2019 - More</span>
-                            <a href="blog4.html" class="blog-title">Imagine, Create and develop/a>
+                            <a href="blog4.html" class="blog-title">Imagine, Create and develop</a>
                             <p>We are doing this together using tutorials.</p>
                         </div>
                     </div>
