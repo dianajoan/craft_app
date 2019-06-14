@@ -6,7 +6,7 @@
                 <div class="header d-md-flex justify-content-between align-items-center py-3 pl-2">
                     <!-- logo -->
                     <div id="logo">
-                        <h1><a href="{{ url('/') }}">Learning DIY Craft</a></h1>
+                        <h1><a href="{{ url('/') }}">Learning DIY Craft | Diana Joanita</a></h1>
                     </div>
                     <!-- //logo -->
                     <!-- nav -->
