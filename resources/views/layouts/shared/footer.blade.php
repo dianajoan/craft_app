@@ -41,7 +41,7 @@
 				<!-- copyright -->
 				<div class="copy_right mr-auto">
 					<p class="text-bl let">© 2019 Learning DIY Craft. All rights reserved | Design by
-						<a href="http://w3layouts.com/" target="_blank">Diana Joanita</a>
+						<a href="mailto:dianajoanita900@gmail.com" target="_blank">Diana Joanita</a>
 					</p>
 				</div>
 				<!-- //copyright -->
