@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<title>Learning DIY Craft</title>
+	<title>Learning DIY Craft | Diana Joanita</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
