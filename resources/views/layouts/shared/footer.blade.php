@@ -49,22 +49,23 @@
 				<div class="social-icons-footer mt-sm-0 mt-3">
 					<ul class="list-unstyled">
 						<li>
-							<a href="#">
+							<a href="#" target="_blank">
 								<span class="fa fa-facebook"></span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" target="_blank">
 								<span class="fa fa-twitter"></span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#" target="_blank">
 								<span class="fa fa-google-plus"></span>
 							</a>
 						</li>
+						
 						<li>
-							<a href="#">
+							<a href="#" target="_blank">
 								<span class="fa fa-instagram"></span>
 							</a>
 						</li>
