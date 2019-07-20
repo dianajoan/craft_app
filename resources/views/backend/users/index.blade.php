@@ -10,18 +10,17 @@
 	<div class="chit-chat-layer1">
 		<div class="col-md-6 chit-chat-layer1-left">
 	               <div class="work-progres">
+	               	<a class="btn btn-success" href="{{ url('admin/users/create') }}"> Create New User</a>
 	                            <div class="chit-chat-heading">
-	                                  All Users
+	                                  Users Management
 	                            </div>
 
-	                            @if (session('status'))
+	                            @if ($message = Session::get('success'))
 									<div class="alert alert-success">
-										{{ session('status') }}
+									  <p>{{ $message }}</p>
 									</div>
 								@endif
-								@if ($users->isEmpty())
-									<p> There is no user.</p>
-								@else
+
 	                            <div class="table-responsive">
 	                                <table class="table table-hover">
 	                                  <thead>
@@ -29,22 +28,38 @@
 	                                      <th>ID</th>
 	                                      <th>Name</th>
 	                                      <th>Email</th>                                    
-	                                      <th>Joined at</th>
+	                                      <th>Roles</th>
+   										  <th width="280px">Action</th>
 	                                  </tr>
 	                              </thead>
 	                              <tbody>
-	                              	@foreach($users as $user)
+	                              	@foreach ($data as $key => $user)
 		                                <tr>
-		                                  <td>{!! $user->id !!}</td>
+		                                  <td>{{ $user->id }}</td>
+		                                  <td>{!! $user->name !!}</td>
+		                                  <td>{!! $user->email !!}</td>
 		                                  <td>
-		                                  	<a href="{!! action('Admin\UsersController@edit', $user->id) !!}">{!! $user->name !!} </a></td>
-		                                  <td>{!! $user->email !!}</td>                    
-		                                  <td>{!! $user->created_at !!}</td>
+										      @if(!empty($user->getRoleNames()))
+										        @foreach($user->getRoleNames() as $v)
+										           <label class="badge badge-success">{{ $v }}</label>
+										        @endforeach
+										      @endif
+										  </td>                    
+		                                  <td>
+		                                  	<!-- delete the nerd (uses the destroy method DESTROY /nerds/{id} -->
+							                <!-- we will add this later since its a little more complicated than the other two buttons -->
+							 
+							                <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
+							                <a class="btn btn-small btn-success" href="{{ URL::to('user/' . $user->id) }}">Show</a>
+							 
+							                <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
+							                <a class="btn btn-small btn-info" href="{{ URL::to('user/' . $user->id . '/edit')}}">Edit</a>
+		                                  </td>
 		                              	</tr>
 	                              	@endforeach
 	                          </tbody>
 	                      </table>
-	                    @endif
+	                    {!! $data->render() !!}
 	                </div>
 	            </div>
 	      	</div>

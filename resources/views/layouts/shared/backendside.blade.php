@@ -14,8 +14,16 @@
 		        <li id="menu-home" ><a href="index.html"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
 		        <li><a href="#"><i class="fa fa-cogs"></i><span>Users</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		          <ul>
-		            <li><a href="{{ url('admin/users') }}">All</a></li>
-		            <li><a href="portlet.html">Portlets</a></li>		            
+		            <li><a href="{{ route('users.index') }}">All</a></li>
+		            <li><a href="{{ route('users.create') }}">Create User</a></li>		            
+		          </ul>
+		        </li>
+		        <li id="menu-comunicacao" ><a href="#"><i class="fa fa-book nav_icon"></i><span>Roles</span><span class="fa fa-angle-right" style="float: right"></span></a>
+		          <ul id="menu-comunicacao-sub" >
+		            <li id="menu-mensagens" style="width: 120px" ><a href="{{ route('roles.index') }}">All</a>		              
+		            </li>
+		            <li id="menu-arquivos" ><a href="{{ route('roles.create') }}">Create Role</a></li>
+		            <li id="menu-arquivos" ><a href="icons.html">Icons</a></li>
 		          </ul>
 		        </li>
 		          <li><a href="maps.html"><i class="fa fa-map-marker"></i><span>Maps</span></a></li>
