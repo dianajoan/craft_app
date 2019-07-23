@@ -22,6 +22,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
 <!--static chart-->
+<!-- Favicon -->
+        <link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
 <script src="{!! asset('dash/js/Chart.min.js') !!}"></script> 
 <!--//charts-->
 <!-- geo chart -->

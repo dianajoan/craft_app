@@ -28,6 +28,9 @@
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
+	<!-- Favicon -->
+		<link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
+
 	<!-- Web-Fonts -->
 	<link
 		href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
