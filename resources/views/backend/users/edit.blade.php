@@ -28,15 +28,15 @@
 							</div>
 							<form class="com-mail" method="post">
 
-								@foreach ($errors->all() as $error)
-									<p class="alert alert-danger">{{ $error }}</p>
-								@endforeach
-
-								@if (session('status'))
-									<div class="alert alert-success">
-										{{ session('status') }}
-									</div>
-								@endif
+								@if ($errors->any())
+							      <div class="alert alert-danger">
+							        <ul>
+							            @foreach ($errors->all() as $error)
+							              <li>{{ $error }}</li>
+							            @endforeach
+							        </ul>
+							      </div><br />
+							    @endif
 
 								<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 

@@ -10,10 +10,6 @@
     	 		<div class="mail-pic">
     	 			<a href="#"><img src="{!! asset('dash/images/b3.png') !!}" alt=""></a>
     	 		</div>
-    	 		<div class="mailer-name"> 			
-    	 				<h5><a href="#">Malorum</a></h5>  	 				
-    	 			     <h6><a href="mailto:info@example.com">malorum@gmail.com</a></h6>   
-    	 		</div>
     	 	    <div class="clearfix"> </div>
     	 	</div>
     	</div>   	 
@@ -38,6 +34,12 @@
 					    <br />
 					@endif
 
+					@if (\Session::has('success'))
+				      <div class="alert alert-success">
+				        <p>{{ \Session::get('success') }}</p>
+				      </div><br />
+				     @endif
+
 					<form class="com-mail" method="post" action="{{ route('roles.update', $role->id) }}">
 						
 						@method('PATCH') 
@@ -50,10 +52,10 @@
 
 				        <div class="form-group">
 				            <label for="display_name">Display Name</label>
-				            <input type="text" class="form-control" name="display_name" {{ $role->display_name }}/>
+				            <input type="text" class="form-control" name="display_name" value="{{ $role->display_name }}"/>
 				        </div>
 
-				        <textarea rows="6"  name="description" id="description">
+				        <textarea rows="6"  name="description" id="description" value="{{ $role->description }}">
 				        	Description 
 						</textarea>
 

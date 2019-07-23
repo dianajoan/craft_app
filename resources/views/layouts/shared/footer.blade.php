@@ -40,7 +40,7 @@
 			<div class="d-sm-flex px-md-3">
 				<!-- copyright -->
 				<div class="copy_right mr-auto">
-					<p class="text-bl let">© 2019 Learning DIY Craft. All rights reserved | Design by
+					<p class="text-bl let">&copy; 2019 Learning DIY Craft. All rights reserved | Design by
 						<a href="mailto:dianajoanita900@gmail.com" target="_blank">Diana Joanita</a>
 					</p>
 				</div>

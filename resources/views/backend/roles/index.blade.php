@@ -15,6 +15,12 @@
                 <div class="chit-chat-heading">
                       Roles Management
              	</div>
+
+             	@if(session()->get('success'))
+				    <div class="alert alert-success">
+				      {{ session()->get('success') }}  
+				    </div>
+				  @endif
 	            <div class="table-responsive">
 	                <table class="table table-hover">
 		                <thead>
