@@ -12,45 +12,33 @@
 		    <div class="menu">
 		      <ul id="menu" >
 		        <li id="menu-home" ><a href="index.html"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
-		        <li><a href="#"><i class="fa fa-cogs"></i><span>Users</span><span class="fa fa-angle-right" style="float: right"></span></a>
+		        <li><a href="#"><i class="fa fa-cogs"></i><span>Manage Users</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		          <ul>
 		            <li><a href="{{ route('users.index') }}">All</a></li>
 		            <li><a href="{{ route('users.create') }}">Create User</a></li>		            
 		          </ul>
 		        </li>
-		        <li id="menu-comunicacao" ><a href="#"><i class="fa fa-book nav_icon"></i><span>Roles</span><span class="fa fa-angle-right" style="float: right"></span></a>
+		        <li id="menu-comunicacao" ><a href="#"><i class="fa fa-book nav_icon"></i><span>Manage Roles</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		          <ul id="menu-comunicacao-sub" >
 		            <li id="menu-mensagens" style="width: 120px" ><a href="{{ route('roles.index') }}">All</a>		              
 		            </li>
 		            <li id="menu-arquivos" ><a href="{{ route('roles.create') }}">Create Role</a></li>
-		            <li id="menu-arquivos" ><a href="icons.html">Icons</a></li>
 		          </ul>
 		        </li>
-		          <li><a href="maps.html"><i class="fa fa-map-marker"></i><span>Maps</span></a></li>
-		        <li id="menu-academico" ><a href="#"><i class="fa fa-file-text"></i><span>Pages</span><span class="fa fa-angle-right" style="float: right"></span></a>
+		        <li id="menu-academico" ><a href="#"><i class="fa fa-file-text"></i><span>Manage Products</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		          <ul id="menu-academico-sub" >
-		          	 <li id="menu-academico-boletim" ><a href="login.html">About</a></li>
-		            <li id="menu-academico-avaliacoes" ><a href="signup.html">Contact</a></li>		           
+		          	 <li id="menu-academico-boletim" ><a href="login.html">All</a></li>
+		            <li id="menu-academico-avaliacoes" ><a href="signup.html">Create a Product</a></li>		           
 		          </ul>
 		        </li>
-		        <li><a href="#"><i class="fa fa-envelope"></i><span>Mailbox</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		        	 <ul id="menu-academico-sub" >
-			            <li id="menu-academico-avaliacoes" ><a href="inbox.html">Inbox</a></li>
-			            <li id="menu-academico-boletim" ><a href="inbox-details.html">Compose email</a></li>
-		             </ul>
-		        </li>
-		         <li><a href="#"><i class="fa fa-cog"></i><span>System</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		         	 <ul id="menu-academico-sub" >
-			            <li id="menu-academico-avaliacoes" ><a href="404.html">404</a></li>
-			            <li id="menu-academico-boletim" ><a href="blank.html">Blank</a></li>
-		             </ul>
-		         </li>
-		         <li><a href="#"><i class="fa fa-shopping-cart"></i><span>E-Commerce</span><span class="fa fa-angle-right" style="float: right"></span></a>
+		         <li><a href="#"><i class="fa fa-shopping-cart"></i><span>Order Management</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		         	<ul id="menu-academico-sub" >
-			            <li id="menu-academico-avaliacoes" ><a href="product.html">Product</a></li>
-			            <li id="menu-academico-boletim" ><a href="price.html">Price</a></li>
+			            <li id="menu-academico-avaliacoes" ><a href="product.html">Todays order</a></li>
+			            <li id="menu-academico-boletim" ><a href="price.html">Pending order</a></li>
+			            <li id="menu-academico-boletim" ><a href="price.html">Delivery order</a></li>
 		             </ul>
 		         </li>
+		         <li><a href="maps.html"><i class="fa fa-map-marker"></i><span>Setings</span></a></li>
 		      </ul>
 		    </div>
 	 </div>

@@ -2,7 +2,7 @@
 				<div class="header-main">
 					<div class="header-left">
 							<div class="logo-name">
-									 <a href="{{ url('/') }}"> <h1>DIYCraft</h1> 
+									 <a href="{{ url('/') }}"> <h1>Crafty</h1> 
 									<!--<img id="logo" src="" alt="Logo"/>--> 
 								  </a> 								
 							</div>

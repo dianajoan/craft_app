@@ -1,5 +1,5 @@
 @extends('layouts.backendmaster')
-@section('title', 'All Roles')
+@section('title', 'Manage Roles')
 
 @section('content')
 
