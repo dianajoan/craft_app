@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<title> @yield('title') | Diana Joanita</title>
+	<title> @yield('title') | Crafty</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />

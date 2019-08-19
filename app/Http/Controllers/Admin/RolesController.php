@@ -17,8 +17,8 @@ class RolesController extends Controller
      */
 	public function index()
 	{
-		$roles = Role::all();
-		return view('backend.roles.index', compact('roles'));
+        $roles = Role::paginate(5);
+		return view('admin.roles.index', ['roles' => $roles]);
 	}
 
 	/**
@@ -28,7 +28,7 @@ class RolesController extends Controller
      */
     public function create()
 	{
-		return view('backend.roles.create');
+		return view('admin.roles.create');
 	}
 
 	/**
@@ -40,13 +40,16 @@ class RolesController extends Controller
 	public function store(RoleFormRequest $request)
     {
         
-        $role = new Role([
-            'name' => $request->get('name'),
-			'display_name' => $request->get('display_name'),
-			'description' => $request->get('description')
-        ]);
-        $role->save();
-        return redirect('/admin/roles/create')->with('success', 'Role created!');
+        //validate input fields
+        request()->validate([
+            'name' => 'required',
+            'display_name' => 'required',
+        ]); 
+ 
+        //save data into database
+        Role::create($request->all());
+        //redirect to role index page
+        return redirect()->route('roles.index')->with('success','Role add successfully.');
     }
 
     /**
@@ -57,7 +60,8 @@ class RolesController extends Controller
      */
     public function show($id)
     {
-        //
+        $role = Role::find($id);
+        return view('admin.roles.show', ['role' => $role]);  
     }
 
     /**
@@ -68,8 +72,8 @@ class RolesController extends Controller
      */
 	public function edit($id)
     {
-        $roles = Role::find($id);
-        return view('backend.roles.edit', compact('roles'));        
+        $role = Role::find($id);
+        return view('admin.roles.edit', ['role' => $role]);        
     }
 
     /**
@@ -81,13 +85,16 @@ class RolesController extends Controller
      */
     public function update(RoleFormRequest $request, $id)
     {
-        $roles = Role::find($id);
-        $role->name =  $request->get('name');
-        $role->display_name = $request->get('display_name');
-        $role->description = $request->get('description');
-        $role->save();
-
-        return redirect('/admin/roles/index')->with('success', 'Role updated!');
+        //validate input fields
+        request()->validate([
+            'name' => 'required',
+            'display_name' => 'required',
+        ]); 
+ 
+        //save data into database
+        Role::create($request->all());
+        //redirect to role index page
+        return redirect()->route('roles.index')->with('success','Role updated successfully.');
     }
 
     /**
@@ -98,9 +105,7 @@ class RolesController extends Controller
      */
     public function destroy($id)
     {
-        $roles = Role::find($id);
-        $role->delete();
-
-        return redirect('/admin/roles/index')->with('success', 'Role deleted!');
+        $role = Role::find($id);
+        return redirect()->route('roles.index')->with('success','Role deleted successfully');
     }
 }

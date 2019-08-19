@@ -4,46 +4,36 @@
 
 <div class="inner-block">
     <div class="inbox">
-    	<h2>Roles Details</h2>
-    	<div class="col-md-4 compose">   	 	
-    	 	<div class="mail-profile">
-    	 		<div class="mail-pic">
-    	 			<a href="#"><img src="{!! asset('dash/images/b3.png') !!}" alt=""></a>
-    	 		</div>
-    	 		<div class="mailer-name"> 			
-               		<a class="btn btn-success" href="{{ route('roles.index') }}"> Back</a>
-    	 		</div>
-    	 	    <div class="clearfix"> </div>
-    	 	</div>
-    	</div>   	 
-	 	<div class="col-md-8 compose-right">
+    	<h2>Roles Details</h2>   	 
+	 	<div class="col-md-13 compose-right">
 			<div class="inbox-details-default">
-				<div class="inbox-details-heading">
+				<div class="alert alert-info inbox-details-heading">
 					Create a Role 
 				</div>
 				<div class="inbox-details-body">
-					<div class="alert alert-info">
-						Please fill details 
-					</div>
 
+					<!-- will be used to show any messages -->
+					@if (Session::has('message'))
+					    <div class="alert alert-info">{{ Session::get('message') }}</div>
+					@endif
+					
 					@if ($errors->any())
 					    <div class="alert alert-danger">
 					        <ul>
 					            @foreach ($errors->all() as $error)
-					              <li>{{ $error }}</li>
+					                <li>{{ $error }}</li>
 					            @endforeach
 					        </ul>
 					    </div>
-					    <br />
 					@endif
 
-					<form class="com-mail" method="post" action="{{ route('roles.store') }}">
+					<form class="com-mail" method="post" action="{{ route('roles.store') }}" accept-charset="UTF-8">
 						
 						@csrf
 
 						<div class="form-group">    
 			              <label for="name">Name</label>
-			              <input type="text" class="form-control" name="name"/>
+			              <input type="text" class="form-control" id="name" name="name" placeholder="Name"/>
 			          	</div>
 
 				        <div class="form-group">
