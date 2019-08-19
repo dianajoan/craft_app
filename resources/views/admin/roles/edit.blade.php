@@ -45,7 +45,7 @@
 						</div>
 
 				        <a href="{{ route('roles.index') }}" class="btn btn-primary-outline">Cancel</a>
-				        <button type="submit" class="btn btn-primary-outline">Submit</button>
+				        <button type="submit" class="btn btn-primary-outline">Update</button>
 				      </form>
 					</div>
 				</div>

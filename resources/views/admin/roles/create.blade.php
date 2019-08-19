@@ -8,7 +8,7 @@
 	 	<div class="col-md-13 compose-right">
 			<div class="inbox-details-default">
 				<div class="alert alert-info inbox-details-heading">
-					Create a Role 
+					Creating
 				</div>
 				<div class="inbox-details-body">
 

@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Role;
 use App\Http\Requests;
-use App\Http\Requests\RoleFormRequest;
 
 class RolesController extends Controller
 {
@@ -37,7 +36,7 @@ class RolesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-	public function store(RoleFormRequest $request)
+	public function store(Request $request)
     {
         
         //validate input fields
@@ -83,7 +82,7 @@ class RolesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(RoleFormRequest $request, $id)
+    public function update(Request $request, $id)
     {
         //validate input fields
         request()->validate([
@@ -106,6 +105,7 @@ class RolesController extends Controller
     public function destroy($id)
     {
         $role = Role::find($id);
+        $role->delete();
         return redirect()->route('roles.index')->with('success','Role deleted successfully');
     }
 }
