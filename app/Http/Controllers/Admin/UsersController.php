@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserFormRequest;
+use Illuminate\Support\Facades\Hash;
 use App\User;
 use App\Role;
-use DB;
-use Hash;
 
 class UsersController extends Controller
 {
@@ -17,11 +17,10 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $data = User::orderBy('id','DESC')->paginate(5);
-        return view('backend.users.index',compact('data'))
-            ->with('i', ($request->input('page', 1) - 1) * 5);
+        $users = User::paginate(5);
+        return view('admin.users.index', ['users' => $users]);
     }
 
 
@@ -32,8 +31,8 @@ class UsersController extends Controller
      */
     public function create()
     {
-        $roles = Role::pluck('name','name')->all();
-        return view('backend.users.create',compact('roles'));
+        $roles = Role::all();
+        return view('admin.users.create', ['roles' => $roles]);
     }
 
 
@@ -43,26 +42,18 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserFormRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|same:confirm-password',
-            'roles' => 'required'
-        ]);
-
-
-        $input = $request->all();
-        $input['password'] = Hash::make($input['password']);
-
-
-        $user = User::create($input);
-        $user->assignRole($request->input('roles'));
-
-
-        return redirect()->route('backend.users.index')
-                        ->with('success','User created successfully');
+        $user = User::whereId($id)->firstOrFail();
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $password = $request->get('password');
+        if($password != "") {
+        $user->password = Hash::make($password);
+        }
+        $user->save();
+        $user->saveRoles($request->get('role'));
+        return redirect()->route('users.index')->with('success','User add successfully.');
     }
 
 
@@ -75,7 +66,7 @@ class UsersController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        return view('backend.users.show',compact('user'));
+        return view('admin.users.show', ['user' => $user]);
     }
 
 
@@ -87,12 +78,10 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
-        $roles = Role::pluck('name','name')->all();
-        $userRole = $user->roles->pluck('name','name')->all();
-
-
-        return view('backend.users.edit',compact('user','roles','userRole'));
+        $user = User::whereId($id)->firstOrFail();
+        $roles = Role::all();
+        $selectedRoles = $user->roles->lists('id')->toArray();
+        return view('admin.users.edit', compact('user', 'roles', 'selectedRoles'));
     }
 
 
@@ -103,34 +92,18 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserFormRequest $request, $id)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email,'.$id,
-            'password' => 'same:confirm-password',
-            'roles' => 'required'
-        ]);
-
-
-        $input = $request->all();
-        if(!empty($input['password'])){ 
-            $input['password'] = Hash::make($input['password']);
-        }else{
-            $input = array_except($input,array('password'));    
+        $user = User::whereId($id)->firstOrFail();
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $password = $request->get('password');
+        if($password != "") {
+        $user->password = Hash::make($password);
         }
-
-
-        $user = User::find($id);
-        $user->update($input);
-        DB::table('model_has_roles')->where('model_id',$id)->delete();
-
-
-        $user->assignRole($request->input('roles'));
-
-
-        return redirect()->route('backend.users.index')
-                        ->with('success','User updated successfully');
+        $user->save();
+        $user->saveRoles($request->get('role'));
+        return redirect()->route('users.index')->with('success','User updated successfully.');
     }
 
 
@@ -142,9 +115,9 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        User::find($id)->delete();
-        return redirect()->route('backend.users.index')
-                        ->with('success','User deleted successfully');
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('users.index')->with('success','User deleted successfully');
     }
 
 }

@@ -1,74 +1,86 @@
 @extends('layouts.backendmaster')
-@section('title', 'Edit a User')
+@section('title', 'Edit User')
 @section('content')
 
 <div class="inner-block">
     <div class="inbox">
-    	  <h2>Edit Details</h2>
-    	 <div class="col-md-4 compose">   	 	
-    	 	<div class="mail-profile">
-    	 		<div class="mail-pic">
-    	 			<a href="#"><img src="{!! asset('dash/images/b3.png') !!}" alt=""></a>
-    	 		</div>
-    	 		<div class="mailer-name"> 			
-    	 				<h5><a href="#">Malorum</a></h5>  	 				
-    	 			     <h6><a href="mailto:info@example.com">malorum@gmail.com</a></h6>   
-    	 		</div>
-    	 	    <div class="clearfix"> </div>
-    	 	</div>
-    	 </div>   	 
-    	 	<div class="col-md-8 compose-right">
-					<div class="inbox-details-default">
-						<div class="inbox-details-heading">
-							Edit User 
-						</div>
-						<div class="inbox-details-body">
-							<div class="alert alert-info">
-								Please fill details 
-							</div>
-							<form class="com-mail" method="post">
+    	<h2>Users Details</h2>   	 
+	 	<div class="col-md-13 compose-right">
+			<div class="inbox-details-default">
+				<div class="alert alert-info inbox-details-heading">
+					Editing 
+				</div>
+				<div class="inbox-details-body">
 
-								@if ($errors->any())
-							      <div class="alert alert-danger">
-							        <ul>
-							            @foreach ($errors->all() as $error)
-							              <li>{{ $error }}</li>
-							            @endforeach
-							        </ul>
-							      </div><br />
-							    @endif
+					<!-- will be used to show any messages -->
+					@if(Session::has('success'))
+	                    <div class="row">
+	                        <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+	                            <div id="message" class="alert alert-success">
+	                                {{ Session::get('success') }}
+	                            </div>
+	                        </div>
+	                    </div>
+	                @endif
+					
+					@if ($errors->any())
+					    <div class="alert alert-danger">
+					        <ul>
+					            @foreach ($errors->all() as $error)
+					                <li>{{ $error }}</li>
+					            @endforeach
+					        </ul>
+					    </div>
+					@endif
 
-								<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+					<form class="com-mail" method="post" action="{{ route('users.update', $user->id) }}" accept-charset="UTF-8">
+						
+						@csrf
 
-								<input type="text"  name="name" id="name" value="{{ $user->name }}">
+						<div class="form-group">    
+			              <label for="name">Name</label>
+			              <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}" placeholder="Name"/>
+			          	</div>
 
-								<input type="email"  name="email" id="email" value="{{ $user->email }}">
+				        <div class="form-group">
+				            <label for="email">Email</label>
+				            <input type="text" class="form-control" name="display_name" value="{{ $user->email }}" />
+				        </div>
 
-								<div class="form-group">
-								<label for="select" class="col-lg-2 control-label">Role
-								</label>
-									<div class="col-lg-10">
-									<select class="form-control" id="role" name="role[]"multiple>
+				        <div class="form-group">
+							<label for="select">Role</label>
+							<div class="col-lg-10">
+								<select class="form-control" id="role" name="role[]" multiple>
 									@foreach($roles as $role)
-									<option value="{!! $role->id !!}" @if(in_array($role->id, $selectedRoles))
-									selected="selected" @endif >{!! $role->display_name !!}
-									</option>
+										<option value="{!! $role->id !!}" @if(in_array($role->id, $selectedRoles)) selected="selected" @endif >
+											{!! $role->display_name !!}
+										</option>
 									@endforeach
-									</select>
-									</div>
-								</div>
-								<input type="password"  name="password" id="password">
-
-								<input type="password"  name="password_confirmation" id="password">
-
-								<input type="reset" value="Cancel">
-								<input type="submit" value="Send">  
-							</form>
+								</select>
+							</div>
 						</div>
+
+						<div class="form-group">
+							<label for="password">Password</label>
+							<div class="col-lg-10">
+								<input type="password" class="form-control" name="password">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password">Confirm password</label>
+							<div class="col-lg-10">
+								<input type="password" class="form-control" name="password_confirmation">
+							</div>
+						</div>
+
+				        <a href="{{ route('users.index') }}" class="btn btn-primary-outline">Cancel</a>
+				        <button type="submit" class="btn btn-primary-outline">Update</button>
+				      </form>
 					</div>
 				</div>
-          <div class="clearfix"> </div>     
-   </div>
+			</div>
+        <div class="clearfix"> </div>     
+   	</div>
 </div>
 <!--inner block end here-->
 @endsection

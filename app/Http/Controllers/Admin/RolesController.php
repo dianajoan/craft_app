@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Role;
+use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\RoleFormRequest;
 
 class RolesController extends Controller
 {
@@ -36,15 +37,8 @@ class RolesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-	public function store(Request $request)
+	public function store(RoleFormRequest $request)
     {
-        
-        //validate input fields
-        request()->validate([
-            'name' => 'required',
-            'display_name' => 'required',
-        ]); 
- 
         //save data into database
         Role::create($request->all());
         //redirect to role index page
@@ -59,7 +53,8 @@ class RolesController extends Controller
      */
     public function show($id)
     {
-        $role = Role::find($id);
+        $role = Role::whereId($id)->firstOrFail();
+        $roles = Role::all();
         return view('admin.roles.show', ['role' => $role]);  
     }
 
@@ -71,7 +66,8 @@ class RolesController extends Controller
      */
 	public function edit($id)
     {
-        $role = Role::find($id);
+        $role = Role::whereId($id)->firstOrFail();
+        $roles = Role::all();
         return view('admin.roles.edit', ['role' => $role]);        
     }
 
@@ -82,16 +78,12 @@ class RolesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //validate input fields
-        request()->validate([
-            'name' => 'required',
-            'display_name' => 'required',
-        ]); 
+    public function update(RoleFormRequest $request, $id)
+    { 
  
+        $role = Role::whereId($id)->firstOrFail();
         //save data into database
-        Role::create($request->all());
+        $role->save();
         //redirect to role index page
         return redirect()->route('roles.index')->with('success','Role updated successfully.');
     }

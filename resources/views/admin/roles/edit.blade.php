@@ -13,6 +13,15 @@
 				<div class="inbox-details-body">
 
 					<!-- will be used to show any messages -->
+					@if(Session::has('success'))
+	                    <div class="row">
+	                        <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+	                            <div id="message" class="alert alert-success">
+	                                {{ Session::get('success') }}
+	                            </div>
+	                        </div>
+	                    </div>
+	                @endif
 					
 					@if ($errors->any())
 					    <div class="alert alert-danger">
@@ -40,7 +49,8 @@
 
 				        <div class="form-group">
 				        	<label for="display_name">Description</label>
-					        <textarea rows="6"  name="description" id="description">{{ $role->description }}
+					        <textarea rows="6"  name="description" id="description">
+					        	{{ $role->description }}
 							</textarea>
 						</div>
 

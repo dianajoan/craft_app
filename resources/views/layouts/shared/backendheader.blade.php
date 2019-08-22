@@ -2,7 +2,7 @@
 				<div class="header-main">
 					<div class="header-left">
 							<div class="logo-name">
-									 <a href="{{ url('/') }}"> <h1>Crafty</h1> 
+									 <a href="{{ url('/admin') }}"> <h1>Crafty</h1> 
 									<!--<img id="logo" src="" alt="Logo"/>--> 
 								  </a> 								
 							</div>
@@ -159,7 +159,7 @@
 												<span class="prfil-img"><img src="{!! asset('dash/images/p1.png') !!}" alt=""> </span> 
 												<div class="user-name">
 													<p>{{ Auth::user()->name }}</p>
-													<span>Administrator</span>
+													<span>Admin</span>
 												</div>
 												<i class="fa fa-angle-down lnr"></i>
 												<i class="fa fa-angle-up lnr"></i>
@@ -169,7 +169,16 @@
 										<ul class="dropdown-menu drp-mnu">
 											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
 											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
-											<li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+											<li> 
+												<a class="drop-text" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                                <i class="fa fa-sign-out"></i> {{ __('Logout') }} 
+                                            	</a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                            
 										</ul>
 									</li>
 								</ul>

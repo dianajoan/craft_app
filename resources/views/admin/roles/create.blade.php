@@ -13,9 +13,15 @@
 				<div class="inbox-details-body">
 
 					<!-- will be used to show any messages -->
-					@if (Session::has('message'))
-					    <div class="alert alert-info">{{ Session::get('message') }}</div>
-					@endif
+					@if(Session::has('success'))
+	                    <div class="row">
+	                        <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+	                            <div id="message" class="alert alert-success">
+	                                {{ Session::get('success') }}
+	                            </div>
+	                        </div>
+	                    </div>
+	                @endif
 					
 					@if ($errors->any())
 					    <div class="alert alert-danger">
@@ -33,7 +39,7 @@
 
 						<div class="form-group">    
 			              <label for="name">Name</label>
-			              <input type="text" class="form-control" id="name" name="name" placeholder="Name"/>
+			              <input type="text" class="form-control" id="name" name="name"/>
 			          	</div>
 
 				        <div class="form-group">
@@ -43,11 +49,11 @@
 
 				        <div class="form-group">
 				        	<label for="display_name">Description</label>
-					        <textarea rows="6"  name="description" id="description">
+					        <textarea rows="3"  name="description" id="description">
 							</textarea>
 						</div>
 
-				        <button type="submit" class="btn btn-primary-outline">Add Role</button>
+				        <button type="submit" class="btn btn-primary-outline">Add</button>
 				        <button type="reset" class="btn btn-primary-outline">Cancel</button>
 				      </form>
 					</div>

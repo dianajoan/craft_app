@@ -1,7 +1,7 @@
 @extends('layouts.backendmaster')
 @section('title', 'Manage Roles')
 
-@section('content')
+@section('content') 
 
 <!--inner block start here-->
 <div class="inner-block">
@@ -24,7 +24,7 @@
                 @endif
 	            <div class="table-responsive">
 	            	<div class="pull-right">
-			           <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
+			           <a class="btn btn-success" href="{{ route('roles.create') }}"> Create Role</a>
 			        </div>
 	                <table class="table table-hover">
 		                <thead>
