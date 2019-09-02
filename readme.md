@@ -30,19 +30,26 @@ Information is all around but not accessed by all. Brilliance is evenly distribu
 This is how you can install this project on your local machine, computer or just environment.
 
 1. First, clone the repository to your local machine:
-	git clone 
+	```git clone https://github.com/dianajoan/craft_app.git```
 
 2. Install the requirements:
-	`pip install -r requirements.txt`
+    ```composer install```
 
-3. Create the database:
- 	`php artisan migrate `
+3. Install the requirements:
+    ```pip install -r requirements.txt```
 
-4. Finally, run the development server:
+4. Copy:
+    ```.env.example and create .env and change the database credentails```
+
+5. Create database called ```db_craft```
+
+6. Create the database:
+ 	```php artisan migrate```
+
+7. Finally, run the development server:
 	
-	
-	type php artisan serve
-    Open your fav browser and type `localhost:8080` to see our application home page
+	type ```php artisan serve```
+    Open your fav browser and type `localhost:8080`  or ```localhost/folder project/public``` to see our application home page
 
 ### Licenses
 
