@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Crafty App'),
 
     /*
     |--------------------------------------------------------------------------
@@ -53,6 +53,8 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+
+    'asset_url' => env('ASSET_URL', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -159,8 +161,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        // roles and perms
+        // Permissions and Roles
         Zizaco\Entrust\EntrustServiceProvider::class,
+        // Intervention Image
+        Intervention\Image\ImageServiceProvider::class,
+        // paypal
+        Srmklive\PayPal\Providers\PayPalServiceProvider::class,
 
     ],
 
@@ -212,6 +218,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         // roles and perms
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        // Intervention Image
+        'Image' => Intervention\Image\Facades\Image::class,
+        // Paypal
+        'PayPal' => Srmklive\PayPal\Providers\Facades\PayPal::class,
 
     ],
 
