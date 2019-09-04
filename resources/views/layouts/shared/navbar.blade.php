@@ -36,8 +36,8 @@
 
                                 <!-- Authentication Links -->
                                 @if (Auth::guest())
-                                    <li><a href="{{ route('login') }}" target="_blank" class="nav-button">Login</a></li>
-                                    <li><a href="{{ route('register') }}" target="_blank" class="nav-button">Register</a></li>
+                                    <li><a href="{{ route('login') }}" class="nav-button">Login</a></li>
+                                    <li><a href="{{ route('register') }}" class="nav-button">Register</a></li>
                                 @else
                                 <li>
                                     <!-- First Tier Drop Down -->

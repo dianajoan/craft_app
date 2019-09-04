@@ -1,5 +1,7 @@
 @extends('layouts.base')
 
+@section('title', 'Login')
+
 @section('content')
 
 <div class="signupform">
