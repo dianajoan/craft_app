@@ -165,8 +165,7 @@ return [
         Zizaco\Entrust\EntrustServiceProvider::class,
         // Intervention Image
         Intervention\Image\ImageServiceProvider::class,
-        // paypal
-        Srmklive\PayPal\Providers\PayPalServiceProvider::class,
+        
 
     ],
 
