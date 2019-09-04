@@ -11,7 +11,7 @@ use App\Models\Role;
 use App\User;
 use Auth;
 
-class UserController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display the constructor of the resource.

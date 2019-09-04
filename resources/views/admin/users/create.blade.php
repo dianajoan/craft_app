@@ -4,6 +4,13 @@
 
 <div class="inner-block">
     <div class="inbox">
+    	<div class="col-md-5 align-self-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url('/admin') }}"> Administrator </a></li>
+                <li class="breadcrumb-item"><a href="{{ route('users.index') }}"> System Users </a></li>
+                <li class="breadcrumb-item active"> Add User </li>
+            </ol>
+        </div>
     	<h2>Users Details</h2>   	 
 	 	<div class="col-md-13 compose-right">
 			<div class="inbox-details-default">

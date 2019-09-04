@@ -42,53 +42,10 @@ Route::group(['middleware' => 'web'], function(){
 	]);
 });
 
-Route::group(['middleware' => 'auth'], function(){
-	//
-});
-
 Route::group(['middleware' => ['auth']], function(){
-	Route::resource('users', 'UserController');
-	Route::resource('roles', 'RoleController');
+	Route::resource('users', 'UsersController');
+	Route::resource('roles', 'RolesController');
 	Route::resource('admin', 'AdminPageController');
-
-
-	/*	custom users	*/
-		Route::get('admin-dashboard-users',[
-			'as'	=> 'user.index',
-			'uses'	=> 'UserController@index',
-		]);
-		Route::get('admin-dashboard-user-create',[
-			'as'	=> 'user.create',
-			'uses'	=> 'UserController@create',
-		]);
-		Route::get('admin-dashboard-users-{id}',[
-			'as'	=> 'user.show',
-			'uses'	=> 'UserController@show',
-		]);
-		Route::get('admin-dashboard-user-edit-{id}',[
-			'as'	=> 'user.edit',
-			'uses'	=> 'UserController@edit',
-		]);
-	/*	/end of users	*/
-
-	/*	custom roles	*/
-		Route::get('admin-user-roles',[
-			'as'	=> 'role.index',
-			'uses'	=> 'RoleController@index',
-		]);
-		Route::get('admin-user-role-create',[
-			'as'	=> 'role.create',
-			'uses'	=> 'RoleController@create',
-		]);
-		Route::get('admin-user-roles-{id}',[
-			'as'	=> 'role.show',
-			'uses'	=> 'RoleController@show',
-		]);
-		Route::get('admin-user-role-edit-{id}',[
-			'as'	=> 'role.edit',
-			'uses'	=> 'RoleController@edit',
-		]);
-	/*	/end of roles	*/
 
 
 	Route::get('home-profile', [

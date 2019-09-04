@@ -10,6 +10,18 @@
 			            <li id="menu-academico-boletim" ><a href="price.html">Delivery order</a></li>
 		             </ul>
 		         </li>
+		         <li><a href="#"><i class="fa fa-user"></i><span>System Roles</span><span class="fa fa-angle-right" style="float: right"></span></a>
+		         	<ul id="menu-academico-sub" >
+			            <li id="menu-academico-avaliacoes" ><a href="{{ route('roles.index') }}">All Roles</a></li>
+			            <li id="menu-academico-boletim" ><a href="{{ route('roles.create') }}">Add Role</a></li>
+		             </ul>
+		         </li>
+		         <li><a href="#"><i class="fa fa-user"></i><span>System Users</span><span class="fa fa-angle-right" style="float: right"></span></a>
+		         	<ul id="menu-academico-sub" >
+			            <li id="menu-academico-avaliacoes" ><a href="{{ route('users.index') }}">All Users</a></li>
+			            <li id="menu-academico-boletim" ><a href="{{ route('users.create') }}">Add User</a></li>
+		             </ul>
+		         </li>
 		         <li><a href="maps.html"><i class="fa fa-map-marker"></i><span>Setings</span></a></li>
 		      </ul>
 		    </div>
