@@ -2,7 +2,7 @@
     <div class="sidebar-menu">		  
 		    <div class="menu">
 		      <ul id="menu" >
-		        <li id="menu-home" ><a href="{{ url('/admin') }}"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
+		        <li id="menu-home" ><a href="{{ url('admin') }}"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
 		         <li><a href="#"><i class="fa fa-shopping-cart"></i><span>Order Management</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		         	<ul id="menu-academico-sub" >
 			            <li id="menu-academico-avaliacoes" ><a href="product.html">Todays order</a></li>

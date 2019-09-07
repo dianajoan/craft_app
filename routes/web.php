@@ -47,17 +47,4 @@ Route::group(['middleware' => ['auth']], function(){
 	Route::resource('roles', 'RolesController');
 	Route::resource('admin', 'AdminPageController');
 
-
-	Route::get('home-profile', [
-		'as'	=> 'profile',
-		'uses'	=> 'UserPageController@profile',
-	]);
-	Route::post('home-profile', [
-		'as'	=> 'profile.update',
-		'uses'	=> 'UserPageController@update_image'
-	]);
-	Route::post('home-profile-password', [
-		'as'	=> 'password.update',
-		'uses'	=> 'UserController@changePassword'
-	]);
 });
