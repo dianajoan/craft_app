@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Welcome | {{ config('app.name') }}</title>
+  <title> {{ config('app.name') }} | Diana Joanita</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon.ico') }}">
