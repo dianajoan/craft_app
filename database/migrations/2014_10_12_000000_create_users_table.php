@@ -17,7 +17,6 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
 
             $table->string('role')->nullable()->default('user');
@@ -29,7 +28,6 @@ class CreateUsersTable extends Migration
             $table->string('profile_image')->default('profile.png')->nullable();
             $table->date('date_of_birth')->nullable();
             $table->string('nationality')->default('Ugandan')->nullable(); 
-            $table->integer('level')->default(0)->nullable();
             $table->string('status')->default('Active')->nullable();
             $table->rememberToken();
             $table->timestamps();

@@ -2,9 +2,9 @@
 				<div class="header-main">
 					<div class="header-left">
 							<div class="logo-name">
-									 <a href="{{ url('/admin') }}"> <h1>Crafty</h1> 
-									<!--<img id="logo" src="" alt="Logo"/>--> 
-								  </a> 								
+								<a href="{{ url('/admin') }}"> <h3>{{ config('app.name') }}</h3> 
+								<!--<img id="logo" src="" alt="Logo"/>--> 
+							  	</a> 								
 							</div>
 							<!--search-box-->
 								<div class="search-box">
