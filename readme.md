@@ -1,4 +1,4 @@
-# DIY CRAFT Website Project in php mysql Laravel
+# CRAFT Website in php mysql Laravel
 
 This site is teaching people how to make things out of the many things they have around them.
 
@@ -60,7 +60,10 @@ This is how you can install this project on your local machine, computer or just
 
 
 6. Create the database:
- 	```php artisan migrate```
+ 	```php artisan migrate
+       php artisan db:seed or 
+       php artisan migrate --seed
+    ```
 
 7. Finally, run the development server:
 	
