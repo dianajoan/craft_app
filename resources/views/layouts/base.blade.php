@@ -1,38 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> @yield('title') | Crafty</title>
- <!-- Meta-Tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="keywords" content="Business Login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <!-- //Meta-Tags -->
-	
-	<!-- css files -->
-	<link href="{!! asset('css/fonts-awesome.min.css') !!}" rel="stylesheet" type="text/css" media="all">
-	<link href="{!! asset('css/styles.css') !!}" rel="stylesheet" type="text/css" media="all"/>
-	<!-- //css files -->
-
-	<!-- Favicon -->
-		<link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
-	
-	<!-- google fonts -->
-	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-	<!-- //google fonts -->
-	
+	<!-- Meta-Tags -->
+	<meta charset="UTF-8">
+	<title>@yield('title') | Crafty</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="{!! asset('css/style.css') !!}">
 </head>
 <body>
 
 	@yield('content')
 
+	  <script  src="{!! asset('js/script.js') !!}"></script>
 	</body>
 </html>
