@@ -1,71 +1,57 @@
-<!-- main banner -->
-    <div class="main-top" id="home">
-        <!-- header -->
-        <header>
-            <div class="container-fluid">
-                <div class="header d-md-flex justify-content-between align-items-center py-3 pl-2">
-                    <!-- logo -->
-                    <div id="logo">
-                        <h1><a href="{{ url('/') }}">Learning DIY Craft</a></h1>
-                    </div>
-                    <!-- //logo -->
-                    <!-- nav -->
-                    <div class="nav_w3ls">
-                        <nav>
-                            <label for="drop" class="toggle">Menu</label>
-                            <input type="checkbox" id="drop" />
-                            <ul class="menu">
-                                <li><a href="{{ url('/') }}" class="active nav-style">Home</a></li>
-                                <li><a href="{{ route('about') }}" class="nav-style">About Us</a></li>
-                                <li>
-                                    <!-- First Tier Drop Down -->
-                                    <label for="drop-2" class="toggle toogle-2 nav-style">Blog <span
-                                            class="fa fa-angle-down" aria-hidden="true"></span>
-                                    </label>
-                                    <a href="#" class="nav-style">Blog <span class="fa fa-angle-down"
-                                            aria-hidden="true"></span></a>
-                                    <input type="checkbox" id="drop-2" />
-                                    <ul>
-                                        <li><a href="{{ route('blog') }}" class="drop-text">Crochet</a></li>
-                                        <li><a href="{{ route('blog') }}" class="drop-text">Stitches</a></li>
-                                        <li><a href="{{ route('blog') }}" class="drop-text">Blankets & Sweaters</a></li>
-                                        <li><a href="{{ route('blog') }}" class="drop-text">Videos</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{ route('contact') }}" class="nav-style">Contact Us</a></li>
+<body data-spy="scroll" data-target="#navbar" data-offset="50" >
+  <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" target="_blank" title="my Website"><img src="https://i.ibb.co/XynTSFb/craftlogo.jpg" alt="Craft Logo" /></a>
+        </div>
 
-                                <!-- Authentication Links -->
-                                @if (Auth::guest())
-                                    <li><a href="{{ route('login') }}" class="nav-button">Login</a></li>
-                                    <li><a href="{{ route('register') }}" class="nav-button">Register</a></li>
-                                @else
-                                <li>
-                                    <!-- First Tier Drop Down -->
-                                    <label for="drop-2" class="toggle toogle-2 nav-style"><span
-                                            class="fa fa-angle-down" aria-hidden="true"></span>
-                                    </label>
-                                    <a href="#" class="nav-style">{{ Auth::user()->name }}<span class="fa fa-angle-down"
-                                            aria-hidden="true"></span></a>
-                                    <input type="checkbox" id="drop-2" />
-                                    <ul>
-                                        <li>
-                                            <a class="drop-text" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
-                                            </a>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
 
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                @csrf
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                                @endif
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- //nav -->
-                </div>
-            </div>
-        </header>
-        <!-- //header -->
+            <li class="active"><a href="#home" class="hash">
+
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+
+            </li>
+            <li><a href="#about" class="hash">
+
+              <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a>
+
+            </li>
+            <li><a href="#portfolio" class="hash">
+
+              <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Blog</a>
+
+            </li>
+            <li><a href="#links" class="hash">
+
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</a>
+
+            </li>
+            <li><a href="#" class="hash">
+
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ Auth::user()->name }}</a>
+
+            </li>
+            <li><a href="{{ route('logout') }}" class="hash" onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+              <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Logout</a>
+
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
+
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+  </nav>
+</body>
