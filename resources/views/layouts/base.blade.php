@@ -2,15 +2,34 @@
 <html lang="en">
 <head>
 	<!-- Meta-Tags -->
-	<meta charset="UTF-8">
-	<title>@yield('title') | Crafty</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-	<link rel="stylesheet" href="{!! asset('css/style.css') !!}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Craft website design" />
+	<title>{{ config('app.name') }} | @yield('title')</title>
+
+	 <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+	<!-- Custom Theme files -->
+	<link href="{!! asset('style.css') !!}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{!! asset('css/font-awesome.min.css') !!}" rel="stylesheet" type="text/css" media="all" />
+	<link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
+	<!-- //Custom Theme files -->
+
+	<!-- web font -->
+	<link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+	<!-- //web font -->
 </head>
 <body>
 
 	@yield('content')
 
-	  <script  src="{!! asset('js/script.js') !!}"></script>
 	</body>
 </html>

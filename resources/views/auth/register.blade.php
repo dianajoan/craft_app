@@ -4,79 +4,90 @@
 
 @section('content')
 
-<div class="signupform">
-    <div class="container">
-        <!-- main content -->
-        <div class="agile_info">
-            <div class="w3l_form">
-                <div class="left_grid_info">
-                    <h1>Manage Your Business Account</h1>
-                    <p>Simply create your crafty profile.</p>
-                    <img src="{!! asset('images/image.jpg') !!}" alt="" />
-                </div>
-            </div>
-            <div class="w3_info">
-                <h2>{{ __('Register') }}</h2>
-                <p>Enter your details to Register.</p>
-                <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
-                        @csrf
-                    <label>{{ __('Name') }}</label>
-                    <div class="input-group">
-                        <span class="fa fa-user" aria-hidden="true"></span>
-                        <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+<!-- main -->
+<div class="w3layouts-main"> 
+  <div class="bg-layer">
+    <h1>{{ __('Register') }}</h1>
+    <div class="header-main">
+      <div class="main-icon">
+        <span class="fa fa-eercast"></span>
+      </div>
+      <div class="header-left-bottom">
+        <form method="post" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+          @csrf 
+          <div class="icon1">
+            <span class="fa fa-user" {{ $errors->has('name') ? ' is-invalid' : '' }}></span>
+            <input type="text" name="name" value="{{ old('email') }}" placeholder="Full name" required=""/>
 
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                    </div>
-                    <label>{{ __('E-Mail Address') }}</label>
-                    <div class="input-group">
-                        <span class="fa fa-envelope" aria-hidden="true"></span>
-                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Enter Your Email" required>
+            @if ($errors->has('name'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('name') }}</strong>
+                </span>
+            @endif
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                    </div>
-                    <label>{{ __('Password') }}</label>
-                    <div class="input-group">
-                        <span class="fa fa-lock" aria-hidden="true"></span>
-                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Enter Password" required>
+          </div>
+          <div class="icon1">
+            <span class="fa fa-user" {{ $errors->has('email') ? ' is-invalid' : '' }}></span>
+            <input type="email" name="email" value="{{ old('email') }}" placeholder="Email Address" required=""/>
 
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                    </div> 
-                    <label>{{ __('Confirm Password') }}</label>
-                    <div class="input-group">
-                        <span class="fa fa-lock" aria-hidden="true"></span>
-                        <input id="password-confirm" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password_confirmation" placeholder="Enter Password" required>
+            @if ($errors->has('email'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+            @endif
 
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                    </div>                       
-                        <button class="btn btn-danger btn-block" type="submit">{{ __('Register') }}</button >                
-                </form>
-                <p class="account">By clicking Register, you agree to our <a href="#">Terms & Conditions!</a></p>
-                <p class="account1">Aready have an account? <a href="{{ route('login') }}">Login here</a></p>
-            </div>
-        </div>
-        <!-- //main content -->
+          </div>
+          <div class="icon1">
+            <span class="fa fa-lock" {{ $errors->has('password') ? ' is-invalid' : '' }}></span>
+            <input type="password" name="password" placeholder="Password" required=""/>
+
+            @if ($errors->has('password'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('password') }}</strong>
+                </span>
+            @endif
+
+          </div>
+          <div class="icon1">
+            <span class="fa fa-lock" {{ $errors->has('password') ? ' is-invalid' : '' }}></span>
+            <input type="password" name="password_confirmation" placeholder="Password" required=""/>
+
+            @if ($errors->has('password'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('password') }}</strong>
+                </span>
+            @endif
+
+          </div>
+          <div class="login-check">
+             <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> I agree to the terms of service</label>
+          </div>
+          <div class="bottom">
+            <button class="btn">Register</button>
+          </div>
+          <div class="links">
+            <p class="right"><a href="{{ route('login') }}">Already user? Login</a></p>
+            <div class="clear"></div>
+          </div>
+        </form> 
+      </div>
+      <div class="social">
+        <ul>
+          <li>or login using : </li>
+          <li><a href="#" class="facebook"><span class="fa fa-facebook"></span></a></li>
+          <li><a href="#" class="twitter"><span class="fa fa-twitter"></span></a></li>
+          <li><a href="#" class="google"><span class="fa fa-google-plus"></span></a></li>
+        </ul>
+      </div>
     </div>
-    <!-- footer -->
-    <div class="footer">
-        <p>&copy; 2019 Learning DIY Craft. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="blank">Diana Joanita Nakyazze</a></p>
+    
+    <!-- copyright -->
+    <div class="copyright">
+      <p>© 2019 {{ config('app.name') }} . All rights reserved | Design by <a href="https://dianajoan.github.io/" target="_blank">Diana Joanita</a></p>
     </div>
-    <!-- footer -->
-</div>
+    <!-- //copyright --> 
+  </div>
+</div>  
+<!-- //main -->
 
 @endsection
