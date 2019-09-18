@@ -4,7 +4,7 @@
           <meta charset="UTF-8">
           <title>{{ config('app.name') }} | Diana Joanita</title>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
         <link rel="icon" type="image/ico" sizes="16x16" href="{{ asset('img/favicon.ico') }}">
     </head>
     <body>
