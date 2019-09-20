@@ -12,7 +12,7 @@
         <div class="drop-shadow">
             <div class="glass"></div>
             <span>
-                @if (Route::has('login'))
+                @if (Route::has('login')) 
                     @auth
                     <div class="container">
                         <a href="{{ url('/home') }}" class="btn btn-1">
