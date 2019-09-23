@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" target="_blank" title="my Website"><img src="https://i.ibb.co/XynTSFb/craftlogo.jpg" alt="Craft Logo" /></a>
+          <a class="navbar-brand" target="_blank" title="my Website"><img src="https://i.ibb.co/XynTSFb/craftlogo.jpg" alt="Craft Logo" style="border-radius: 10px; width: 35px; height: 35px;"/></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

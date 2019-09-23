@@ -9,7 +9,7 @@
         </ul>
       </div>
       <div class="col-sm-8  center">
-          <img id="flogo" src="https://i.ibb.co/XynTSFb/craftlogo.jpg" alt="logo: Craft" title="logo" width="150px"/>
+          <img id="flogo" src="https://i.ibb.co/XynTSFb/craftlogo.jpg" alt="logo: Craft" title="logo" style="border-radius: 10px; width: 100px; height: 100px;"/>
           <p >contact me at <a href="mailto:dianajoanita900@gmail.com">Email</a></p>
           <p>Copyright &copy; 2019 by <a href="https://dianajoan.github.io/" target="_blank">Diana Joanita</a></p>
       </div>
