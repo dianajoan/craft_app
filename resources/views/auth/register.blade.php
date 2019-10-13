@@ -20,7 +20,7 @@
             <input type="text" name="name" value="{{ old('name') }}" placeholder="Full Names" required/>
 
             @if ($errors->has('name'))
-                <span class="invalid-feedback" role="alert">
+                <span class="invalid-feedback" style="color: red;" role="alert">
                     <strong>{{ $errors->first('name') }}</strong>
                 </span>
             @endif
@@ -31,7 +31,7 @@
             <input type="email" name="email" value="{{ old('email') }}" placeholder="Email Address" required />
 
             @if ($errors->has('email'))
-                <span class="invalid-feedback" role="alert">
+                <span class="invalid-feedback" style="color: red;" role="alert">
                     <strong>{{ $errors->first('email') }}</strong>
                 </span>
             @endif
@@ -42,7 +42,7 @@
             <input type="password" name="password" placeholder="Password" required=""/>
 
             @if ($errors->has('password'))
-                <span class="invalid-feedback" role="alert">
+                <span class="invalid-feedback" style="color: red;" role="alert">
                     <strong>{{ $errors->first('password') }}</strong>
                 </span>
             @endif
@@ -53,7 +53,7 @@
             <input type="password" name="password_confirmation" placeholder="Password" required=""/>
 
             @if ($errors->has('password'))
-                <span class="invalid-feedback" role="alert">
+                <span class="invalid-feedback" style="color: red;" role="alert">
                     <strong>{{ $errors->first('password') }}</strong>
                 </span>
             @endif

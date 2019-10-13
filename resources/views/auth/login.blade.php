@@ -20,7 +20,7 @@
             <input type="email" name="email" value="{{ old('email') }}" placeholder="Email Address" required=""/>
 
             @if ($errors->has('email'))
-                <span class="invalid-feedback" role="alert">
+                <span class="invalid-feedback text-danger" style="color: red;" role="alert">
                     <strong>{{ $errors->first('email') }}</strong>
                 </span>
             @endif
@@ -31,7 +31,7 @@
             <input type="password" name="password" placeholder="Password" required=""/>
 
             @if ($errors->has('password'))
-                <span class="invalid-feedback" role="alert">
+                <span class="invalid-feedback text-danger" style="color: red;" role="alert">
                     <strong>{{ $errors->first('password') }}</strong>
                 </span>
             @endif

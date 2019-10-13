@@ -113,15 +113,17 @@
 													<div class="bar yellow" style="width:40%;"></div>
 												</div>
 											</a></li>
-											<li><a href="#">
-												<div class="task-info">
-													<span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
-												   <div class="clearfix"></div>	
-												</div>
-												<div class="progress progress-striped active">
-													 <div class="bar green" style="width:90%;"></div>
-												</div>
-											</a></li>
+											<li>
+												<a href="#">
+													<div class="task-info">
+														<span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
+													   <div class="clearfix"></div>	
+													</div>
+													<div class="progress progress-striped active">
+														 <div class="bar green" style="width:90%;"></div>
+													</div>
+												</a>
+											</li>
 											<li><a href="#">
 												<div class="task-info">
 													<span class="task-desc">Mobile App</span><span class="percentage">33%</span>
