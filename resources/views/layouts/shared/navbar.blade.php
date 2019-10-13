@@ -33,22 +33,25 @@
             </li>
             <li><a href="#links" class="hash">
 
-              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</a>
+            <span class="glyphicon glyphicon-send" aria-hidden="true"></span> Contact Us </a>
 
             </li>
-            <li><a href="#" class="hash">
-
-              <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ Auth::user()->name }}</a>
-
+            {{-- 
+              <li><a >
+                <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Logout</a>
+              </li> --}}
+            {{-- <li class="page-scroll dropdown"> --}}
+              <li class="page-scroll dropdown">
+                <a href="javascript:void(0)" class="hash"><span class="dropbtn"><i class="glyphicon glyphicon-user"></i></span> {{ Auth::user()->name }} <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content" style="min-width: 170px; margin-right: 5px;">
+                    <a href="javascript:void(0)" class="col-12"><i class="fa fa-user-plus"></i> Profile </a>
+                    {{-- <a href="#links" class="col-12 page-scroll"><i class="fa fa-send"></i> Contact Us</a> --}}
+                    <a href="{{ route('logout') }}" class="hash" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="col-12"><i class="fa fa-power-off"></i> Logout </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>
+                </div>
             </li>
-            <li><a href="{{ route('logout') }}" class="hash" onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-              <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Logout</a>
-
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                  @csrf
-              </form>
-
+            <li style="visibility: hidden;">
+              <a href="javascript:void(0)" class="hash">Empty Link</a>
             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
