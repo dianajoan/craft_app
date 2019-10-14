@@ -29,4 +29,9 @@ class HomeController extends Controller
             return redirect()->route('admin')->with('success', 'Welcome back ' . Auth::user()->name . ', ' . Role::where('name',Auth::user()->role)->first()->display_name);
         return view('home');
     }
+
+    public function userIndex()
+    {
+        return view('home')->with('info','Welcome back, ' . ' - ' . Auth::user()->name . '!');
+    }
 }

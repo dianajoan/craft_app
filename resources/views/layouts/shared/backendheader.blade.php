@@ -169,8 +169,8 @@
 											</div>	
 										</a>
 										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
-											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
+											<li> <a href="{{ route('userhome') }}"><i class="fa fa-home"></i> Home </a> </li> 
+											<li> <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Profile</a> </li> 
 											<li> 
 												<a class="drop-text" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">

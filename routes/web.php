@@ -46,7 +46,7 @@ Route::group(['prefix'	=> 'admin', 'middleware'	=> ['auth']], function()
 	}
 );
 
-Route::group(['prefix' => 'home', 'middleware' => ['auth','verified']], function()
+Route::group(['prefix' => 'home', 'middleware' => ['auth']], function()
 {
 	Route::get('/user/profile/settings', [
 		'as' 	=> 'settings',
