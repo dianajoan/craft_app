@@ -23,12 +23,22 @@
                     </div>
                     @else
                     <div class="container">
-                        <a href="{{ route('login') }}" class="btn btn-5">
+                        <a href="{{ route('login') }}" class="btn btn-5" style="text-shadow: 1px 1px brown;">
                             {{ __('Login') }}
                         </a>
+                        <a href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('login-form').submit();" class="btn btn-5" style="text-shadow: 1px 1px brown;">
+                            {{ __('Guest..') }}
+                        </a>
+
+                        <form id="login-form" action="{{ route('login') }}" method="POST" style="display: none;">
+                            @csrf
+                            <input type="hidden" name="email" value="guest@gmail.com">
+                            <input type="hidden" name="password" value="dollar">
+                            <input type="checkbox" name="checkbox" style="display: none;" checked>
+                        </form>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="btn btn-5">
+                            <a href="{{ route('register') }}" class="btn btn-5" style="text-shadow: 1px 1px brown;">
                                 {{ __('Register') }}
                             </a>
                         @endif
