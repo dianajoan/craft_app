@@ -37,6 +37,7 @@
 					<form class="com-mail" method="post" action="{{ route('roles.update', $role->id) }}" accept-charset="UTF-8">
 						
 						@csrf
+						{{ method_field('PATCH') }}
 
 						<div class="form-group">    
 			              <label for="name">Name</label>
