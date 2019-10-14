@@ -12,17 +12,6 @@
 					Editing 
 				</div>
 				<div class="inbox-details-body">
-
-					<!-- will be used to show any messages -->
-					@if(Session::has('success'))
-	                    <div class="row">
-	                        <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
-	                            <div id="message" class="alert alert-success">
-	                                {{ Session::get('success') }}
-	                            </div>
-	                        </div>
-	                    </div>
-	                @endif
 					
 					@if ($errors->any())
 					    <div class="alert alert-danger">
@@ -34,9 +23,10 @@
 					    </div>
 					@endif
 
-					<form class="com-mail" method="post" action="{{ route('roles.update', $role->id) }}" accept-charset="UTF-8">
+					<form class="com-mail" method="POST" action="{{ route('roles.update', $role->id) }}">
 						
 						@csrf
+						{{ method_field('PATCH') }}
 
 						<div class="form-group">    
 			              <label for="name">Name</label>
