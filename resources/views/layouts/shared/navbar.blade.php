@@ -16,25 +16,25 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
 
-            <li class="active"><a href="#home" class="hash">
-
-              <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
-
+            <li class="active">
+              <a href="#home" class="hash">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+              </a>
             </li>
-            <li><a href="#about" class="hash">
-
-              <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a>
-
+            <li>
+              <a href="#about" class="hash">
+                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About
+              </a>
             </li>
-            <li><a href="#portfolio" class="hash">
-
-              <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Blog</a>
-
+            <li>
+              <a href="#portfolio" class="hash">
+                <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Blog
+              </a>
             </li>
-            <li><a href="#links" class="hash">
-
-            <span class="glyphicon glyphicon-send" aria-hidden="true"></span> Contact Us </a>
-
+            <li>
+              <a href="#links" class="hash">
+                <span class="glyphicon glyphicon-send" aria-hidden="true"></span> Contact Us 
+              </a>
             </li>
             {{-- 
               <li><a >
@@ -44,7 +44,8 @@
               <li class="page-scroll dropdown">
                 <a href="javascript:void(0)" class="hash"><span class="dropbtn"><i class="glyphicon glyphicon-user"></i></span> {{ Auth::user()->name }} <i class="fa fa-caret-down"></i></a>
                 <div class="dropdown-content" style="min-width: 170px; margin-right: 5px;">
-                    <a href="javascript:void(0)" class="col-12"><i class="fa fa-user-plus"></i> Profile </a>
+                    @role(['super-admin','admin'])<a href="{{ route('admin') }}"><i class="glyphicon glyphicon-dashboard" aria-hidden="true"></i> Administrator</a>@endrole
+                    <a href="{{ route('profile') }}" class="col-12"><i class="fa fa-user-plus"></i> Profile </a>
                     {{-- <a href="#links" class="col-12 page-scroll"><i class="fa fa-send"></i> Contact Us</a> --}}
                     <a href="{{ route('logout') }}" class="hash" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="col-12"><i class="fa fa-power-off"></i> Logout </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>

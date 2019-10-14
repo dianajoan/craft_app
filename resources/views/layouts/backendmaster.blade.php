@@ -6,32 +6,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title> @yield('title') | Admin</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<link rel="stylesheet" type="text/css" href="{!! asset('dash/css/bootstrap.css') !!}" media="all">
-<!-- Custom Theme files -->
-<link rel="stylesheet" type="text/css" href="{!! asset('dash/css/style.css') !!}" media="all">
-<!--js-->
-<script src="{!! asset('dash/js/jquery-2.1.1.min.js') !!}"></script> 
-<!--icons-css-->
-<link rel="stylesheet" type="text/css" href="{!! asset('dash/css/font-awesome.css') !!}" >
-<!--Google Fonts-->
-<link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
-<!--static chart-->
-<!-- Favicon -->
-        <link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
-<script src="{!! asset('dash/js/Chart.min.js') !!}"></script> 
-<!--//charts-->
-<!-- geo chart -->
+    <title> @yield('title') | {{ config('app.name') }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <link rel="stylesheet" type="text/css" href="{!! asset('dash/css/bootstrap.css') !!}" media="all">
+    <!-- Custom Theme files -->
+    <link rel="stylesheet" type="text/css" href="{!! asset('dash/css/style.css') !!}" media="all">
+    <!--js-->
+    <script src="{!! asset('dash/js/jquery-2.1.1.min.js') !!}"></script> 
+    <!--icons-css-->
+    <link rel="stylesheet" type="text/css" href="{!! asset('dash/css/font-awesome.css') !!}" >
+    <!--Google Fonts-->
+    <link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <!--static chart-->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
+    <script src="{!! asset('dash/js/Chart.min.js') !!}"></script> 
+    <!--//charts-->
+    <!-- geo chart -->
     <script src="//cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
     <script>window.modernizr || document.write('<script src="lib/modernizr/modernizr-custom.js"><\/script>')</script>
     <!--<script src="lib/html5shiv/html5shiv.js"></script>-->
-     <!-- Chartinator  -->
-     <script src="{!! asset('dash/js/chartinator.js') !!}"></script> 
+    <!-- Chartinator  -->
+    <script src="{!! asset('dash/js/chartinator.js') !!}"></script> 
     <script type="text/javascript">
         jQuery(function ($) {
 
@@ -106,42 +106,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="page-container">	
    <div class="left-content">
 	   <div class="mother-grid-inner">
-
             @include('layouts.shared.backendheader')
-
-@yield('content')
-
-	@include('layouts.shared.backendfooter')
-
-</div>
-</div>
-	
+            @yield('content')
+	        @include('layouts.shared.backendfooter')
+        </div>
+    </div>
 	@include('layouts.shared.backendside')
-
-<script>
-var toggle = true;
-            
-$(".sidebar-icon").click(function() {                
-  if (toggle)
-  {
-    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
-    $("#menu span").css({"position":"absolute"});
-  }
-  else
-  {
-    $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
-    setTimeout(function() {
-      $("#menu span").css({"position":"relative"});
-    }, 400);
-  }               
-                toggle = !toggle;
-            });
-</script>
-<!--scrolling js-->
-		<script src="{!! asset('dash/js/jquery.nicescroll.js') !!}"></script> 
-		<script src="{!! asset('dash/js/scripts.min.js') !!}"></script> 
-		<!--//scrolling js-->
-<script src="{!! asset('dash/js/bootstrap.js') !!}"></script> 
+    <script>
+    var toggle = true;
+                
+    $(".sidebar-icon").click(function() {                
+      if (toggle)
+      {
+        $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+        $("#menu span").css({"position":"absolute"});
+      }
+      else
+      {
+        $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+        setTimeout(function() {
+          $("#menu span").css({"position":"relative"});
+        }, 400);
+      }               
+                    toggle = !toggle;
+                });
+    </script>
+    <!--scrolling js-->
+	<script src="{!! asset('dash/js/jquery.nicescroll.js') !!}"></script> 
+	<script src="{!! asset('dash/js/scripts.min.js') !!}"></script> 
+	<!--//scrolling js-->
+    <script src="{!! asset('dash/js/bootstrap.js') !!}"></script> 
 <!-- mother grid end here-->
 </body>
 </html>                     

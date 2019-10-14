@@ -4,22 +4,22 @@
 
 <div class="inner-block">
     <div class="inbox">
-    	<div class="col-md-5 align-self-center">
+    	<div class="col-md-9 align-self-center">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ url('/admin') }}"> Administrator </a></li>
                 <li class="breadcrumb-item"><a href="{{ route('users.index') }}"> System Users </a></li>
                 <li class="breadcrumb-item active"> Edit User </li>
             </ol>
         </div>
-    	<h2>Edit User Profile</h2>   	 
-	 	<div class="col-md-13 compose-right">
+    	<h2><small><i class="fa fa-edit"></i> Edit User Profile</small></h2>   	 
+    	@include('layouts.shared.notifications')
+	 	<div class="col-md-8 compose-right">
 			<div class="inbox-details-default">
 				<div class="alert alert-info inbox-details-heading">
-					Fill in the details
+					<img src="{{ asset('files/profile/images/'. $user->profile_image) }}" style="max-width: 30px; border-radius: 50%;"> Edit And Update {{ $user->name }}'s Profile Details
 				</div>
 				<div class="inbox-details-body">
 					<form class="com-mail" method="post" action="{{ route('users.update', $user->id) }}" accept-charset="UTF-8">
-						
 						@csrf
                         {{ method_field('PATCH') }}
 
@@ -50,15 +50,13 @@
 				            <input type="tel" class="form-control" value="{{ $user->telephone }}" name="telephone" id="phoneNumber1" required/>
 				        </div>
 
-				        <input type="hidden" name="password" value="{{ bcrypt('dollar') }}">
-
 				        <div class="form-group">
 							<label for="gender1">Gender</label>
-								<select class="form-control" id="gender1" name="gender">
-									<option value="{{ $user->gender }}">Select Gender</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-								</select>
+							<select class="form-control" id="gender1" name="gender">
+								<option value="{{ $user->gender }}">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+							</select>
 						</div>
 
 						<div class="form-group">
@@ -83,13 +81,13 @@
 
 				        <div class="form-group">
 							<label for="role1">Role</label>
-								<select class="form-control" id="role1" name="role" required>
-									<option value="{{ $user->role }}">Chose to update user role</option>
-									@foreach($roles as $role)
-                                        <option value="{{ $role->name }}" title="{{ $role->description }}">{{ $role->display_name }}
-                                        </option>
-                                    @endforeach
-								</select>
+							<select class="form-control" id="role1" name="role" required>
+								<option value="{{ $user->role }}">Chose to update user role</option>
+								@foreach($roles as $role)
+                                    <option value="{{ $role->name }}" title="{{ $role->description }}">{{ $role->display_name }}
+                                    </option>
+                                @endforeach
+							</select>
 						</div>
 
 				        <div class="form-group">
@@ -118,20 +116,38 @@
                             </div>
                         </div>
 				        <button type="submit" class="btn btn-rounded btn-primary">Update</button>
-				        <button type="reset" class="btn btn-primary-outline">Cancel</button>
-				      </form>
-					</div>
+				        <a href="{{ route('users.index') }}" onclick="return confirm('You are about to leave profile unchanged.\nIs this okay?')" class="btn btn-default">Cancel</a>
+				    </form>
 				</div>
 			</div>
-        <div class="clearfix"> </div>     
+		</div>
+        <div class="col-md-4 compose-right text-center">
+            <div class="inbox-details-default">
+                <div class="alert alert-info inbox-details-heading">
+                    <img src="{{ asset('files/profile/images/'. $user->profile_image) }}" style="max-width: 30px; border-radius: 50%;"> User Profile Operations
+                </div>
+                <div class="inbox-details-body">
+	                <div class="row text-center">
+	                    <div class="col-12">
+	                        <img src="{{ asset('files/profile/images/'.$user->profile_image) }}" alt="user image" style="max-width: 98%; border-radius: 3px;">
+	                    </div>
+	                    <div class="col-12">
+	                    	<div class="row">
+	                    		<div class="col-md-6">
+	                    			<a href="{{ route('users.index') }}" class="btn btn-round btn block btn-primary">All Users</a>
+	                    		</div>
+	                    		<div class="col-md-6">
+	                    			
+	                    		</div>
+	                    	</div>
+	                    </div>
+	                </div>
+	            </div>
+            </div>
+        </div>    
    	</div>
+   	<div class="clearfix"> </div>  
 </div>
 <!--inner block end here-->
 @endsection
 
-
-
-
-
-                      
-						

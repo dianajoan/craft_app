@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en" >
 <head>
     <meta charset="UTF-8">
@@ -18,18 +18,18 @@
                             <svg>
                                 <rect x="0" y="0" fill="none" width="100%" height="100%"/>
                             </svg>
-                                Home
+                                {{ __('Home') }}
                         </a>
                     </div>
                     @else
                     <div class="container">
                         <a href="{{ route('login') }}" class="btn btn-5">
-                            Login
+                            {{ __('Login') }}
                         </a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="btn btn-5">
-                                Register
+                                {{ __('Register') }}
                             </a>
                         @endif
                     </div>
@@ -37,7 +37,7 @@
                 @endif
             </span>
         </div>
-        <h1>Welcome <strong>To The Craft</strong></h1>
+        <h1>Welcome To <strong> {{ config('app.name') }} </strong></h1>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     </body>
 </html>
