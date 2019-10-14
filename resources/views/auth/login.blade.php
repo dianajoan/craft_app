@@ -38,7 +38,7 @@
 
           </div>
           <div class="login-check">
-             <label class="checkbox"><input type="checkbox" name="checkbox" {{ old('remember') ? 'checked' : '' }} checked=""><i> </i> Keep me logged in</label>
+             <label class="checkbox"><input type="checkbox" name="checkbox" {{ old('remember') ? 'checked' : '' }} checked><i> </i> Keep me logged in</label>
           </div>
           <div class="bottom">
             <button class="btn">Log In</button>

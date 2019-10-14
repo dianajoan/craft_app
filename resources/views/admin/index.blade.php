@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="inner-block">
-	<div class="row banner" style="min-height: 400px;">
+	<div class="row banner center" style="min-height: 400px;">
 		<div class="col-md-4 compose-right">
 			<div class="inbox-details-default">
 				<div class="list-group-item">
