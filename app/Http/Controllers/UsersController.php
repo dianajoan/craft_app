@@ -166,7 +166,6 @@ class UsersController extends Controller
         $user->nationality  = $request->nationality;
         $user->occupation   = $request->occupation;
         $user->date_of_birth     = $request->date_of_birth;
-        $user->institution  = $request->institution;
         $user->status   = $request->status;
         $user->save();
 

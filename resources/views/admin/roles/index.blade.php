@@ -24,9 +24,11 @@
                     </div>
                 @endif
 	            <div class="table-responsive">
+	            	@permission('create_role')
 	            	<div class="pull-right">
 			           <a class="btn btn-success" href="{{ route('roles.create') }}"> Create Role</a>
 			        </div>
+			        @endpermission
 	                <table class="table table-hover">
 		                <thead>
 	                        <tr>

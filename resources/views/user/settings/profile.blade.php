@@ -20,7 +20,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title"> <img src="{{ asset('files/profile/images/'. $user->profile_image) }}" style="max-width: 30px; border-radius: 50%;"> {{ $user->name }} - My Profile Settings | {{ config('app.name') }}</h4>
+                        <h4 class="card-title"> <img src="{{ asset('files/profile/images/'. $user->profile_image) }}" style="max-width: 30px; border-radius: 50%;"> {{ $user->name }} - My Profile Settings</h4>
                         <hr>
 						<ul class="nav nav-tabs">
 						    <li class="active"><a data-toggle="tab" href="#one">My Wall</a></li>

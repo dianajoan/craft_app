@@ -17,7 +17,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title"> <img src="{{ asset('files/profile/images/'. $user->profile_image) }}" style="max-width: 30px; border-radius: 50%;"> {{ $user->name }}'s Details | {{ config('app.name') }}</h4>
+                        <h4 class="card-title"> <img src="{{ asset('files/profile/images/'. $user->profile_image) }}" style="max-width: 30px; border-radius: 50%;"> {{ $user->name }}'s Details</h4>
                         <div class="table-responsive">
                             <table class="table m-b-0">
                                 <thead>
