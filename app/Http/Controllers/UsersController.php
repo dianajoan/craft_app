@@ -154,7 +154,21 @@ class UsersController extends Controller
             'role'      =>  'required',
         ]);
         
-        User::find($id)->update($request->all());
+        // User::find($id)->update($request->all());
+        $user  = User::find($id);
+        $user->name     = $request->name;
+        $user->email    = $request->email;
+        $user->username   = $request->username;
+        $user->gender   = $request->gender;
+        $user->telephone     = $request->telephone;
+        $user->role     = $request->role;
+        $user->location = $request->location;
+        $user->nationality  = $request->nationality;
+        $user->occupation   = $request->occupation;
+        $user->date_of_birth     = $request->date_of_birth;
+        $user->institution  = $request->institution;
+        $user->status   = $request->status;
+        $user->save();
 
         DB::table('role_user')->where('user_id',$id)->delete();
 
