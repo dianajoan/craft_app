@@ -11,7 +11,8 @@
                 <li class="breadcrumb-item active"> {{ $user->name }} Details </li>
             </ol>
         </div>
-    	<h2><small>Show User</small></h2>   	 
+    	<h2><small>Show User</small></h2>
+        @include('layouts.shared.notifications')	 
 	 	<div class="row">
             <div class="col-md-8">
                 <div class="card">

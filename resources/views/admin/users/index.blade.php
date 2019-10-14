@@ -2,32 +2,21 @@
 @section('title', 'System Users')
 
 @section('content')
-
 <!--inner block start here-->
 <div class="inner-block">
-	<div class="col-md-5 align-self-center">
+	<div class="col-md-8 align-self-center">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ url('/admin') }}"> Administrator </a></li>
             <li class="breadcrumb-item active">System Users</li>
         </ol>
     </div>
+    <h2><small class="text-info"><i class="fa fa-users"></i>System Users</small></h2>
+    @include('layouts.shared.notifications')
 	<!--mainpage chit-chating-->
 	<div class="chit-chat-layer1">
 		<div class="col-md-13 chit-chat-layer1-left">
 	        <div class="work-progres">
-	            <div class="chit-chat-heading">
-                      Users Management
-             	</div>
-
-             	@if(Session::has('success'))
-                    <div class="row">
-                        <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
-                            <div id="message" class="alert alert-success">
-                                {{ Session::get('success') }}
-                            </div>
-                        </div>
-                    </div>
-                @endif
+	            <div class="chit-chat-heading"> Users Management | <a href="{{ route('users.create') }}" style="text-transform: capitalize;">New User</a></div>
 	            <div class="table-responsive">
                     <table class="table table-hover">
 	                    <thead>
@@ -72,14 +61,6 @@
                                             <a href="{{ route('users.show', $user->id) }}" class="btn btn-xs text-info" title="User Details"><i class="fa fa-info-circle"></i></a>
                                             <a href="{{ route('users.edit', $user->id) }}" class="btn btn-xs text-primary"><i class="fa fa-edit" title="Edit User Profile"></i></a>
                                         </td>
-    		                        	<div class="col-md-4">
-    				                        <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-    				                             {{ csrf_field() }}
-    				                             {{ method_field('DELETE') }}
-    				                           <input type="submit" class="btn btn-block btn-danger btn-xs" value="Delete" onclick="return confirm('You are deleting this row.\nAre you sure?')" />
-    				                        </form>
-    				                    </div>
-    						        </div>
     				                    </td>         
     		                      	</tr>
     		                  	@endforeach
