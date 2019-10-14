@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title> @yield('title') | Admin</title>
+<title> @yield('title') | {{ config('app.name') }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -106,38 +106,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="page-container">	
    <div class="left-content">
 	   <div class="mother-grid-inner">
-
             @include('layouts.shared.backendheader')
-
-@yield('content')
-
-	@include('layouts.shared.backendfooter')
-
-</div>
-</div>
-	
+            @yield('content')
+	        @include('layouts.shared.backendfooter')
+        </div>
+    </div>
 	@include('layouts.shared.backendside')
-
-<script>
-var toggle = true;
-            
-$(".sidebar-icon").click(function() {                
-  if (toggle)
-  {
-    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
-    $("#menu span").css({"position":"absolute"});
-  }
-  else
-  {
-    $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
-    setTimeout(function() {
-      $("#menu span").css({"position":"relative"});
-    }, 400);
-  }               
-                toggle = !toggle;
-            });
-</script>
-<!--scrolling js-->
+    <script>
+    var toggle = true;
+                
+    $(".sidebar-icon").click(function() {                
+      if (toggle)
+      {
+        $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+        $("#menu span").css({"position":"absolute"});
+      }
+      else
+      {
+        $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+        setTimeout(function() {
+          $("#menu span").css({"position":"relative"});
+        }, 400);
+      }               
+                    toggle = !toggle;
+                });
+    </script>
+    <!--scrolling js-->
 		<script src="{!! asset('dash/js/jquery.nicescroll.js') !!}"></script> 
 		<script src="{!! asset('dash/js/scripts.min.js') !!}"></script> 
 		<!--//scrolling js-->

@@ -113,15 +113,17 @@
 													<div class="bar yellow" style="width:40%;"></div>
 												</div>
 											</a></li>
-											<li><a href="#">
-												<div class="task-info">
-													<span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
-												   <div class="clearfix"></div>	
-												</div>
-												<div class="progress progress-striped active">
-													 <div class="bar green" style="width:90%;"></div>
-												</div>
-											</a></li>
+											<li>
+												<a href="#">
+													<div class="task-info">
+														<span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
+													   <div class="clearfix"></div>	
+													</div>
+													<div class="progress progress-striped active">
+														 <div class="bar green" style="width:90%;"></div>
+													</div>
+												</a>
+											</li>
 											<li><a href="#">
 												<div class="task-info">
 													<span class="task-desc">Mobile App</span><span class="percentage">33%</span>
@@ -167,8 +169,8 @@
 											</div>	
 										</a>
 										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
-											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
+											<li> <a href="{{ route('userhome') }}"><i class="fa fa-home"></i> Home </a> </li> 
+											<li> <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Profile</a> </li> 
 											<li> 
 												<a class="drop-text" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">

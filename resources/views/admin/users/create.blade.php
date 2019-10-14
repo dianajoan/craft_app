@@ -4,15 +4,16 @@
 
 <div class="inner-block">
     <div class="inbox">
-    	<div class="col-md-5 align-self-center">
+    	<div class="col-md-8 align-self-center">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ url('/admin') }}"> Administrator </a></li>
                 <li class="breadcrumb-item"><a href="{{ route('users.index') }}"> System Users </a></li>
                 <li class="breadcrumb-item active"> Add User </li>
             </ol>
         </div>
-    	<h2>New User Profile</h2>   	 
-	 	<div class="col-md-13 compose-right">
+    	<h2><small><i class="fa fa-plus"></i> New User Profile</small></h2>
+    	@include('layouts.shared.notifications') 
+	 	<div class="col-md-8 compose-right">
 			<div class="inbox-details-default">
 				<div class="alert alert-info inbox-details-heading">
 					Fill in the details
@@ -122,8 +123,29 @@
 					</div>
 				</div>
 			</div>
-        <div class="clearfix"> </div>     
+        <div class="col-md-4 compose-right text-center">
+            <div class="inbox-details-default">
+                <div class="alert alert-info inbox-details-heading">
+                    Operations
+                </div>
+                <div class="inbox-details-body">
+	                <div class="row text-center">
+	                    <div class="col-12">
+	                    	<div class="row">
+	                    		<div class="col-md-6">
+	                    			<a href="{{ route('users.index') }}" class="btn btn-round btn block btn-primary">All Users</a>
+	                    		</div>
+	                    		<div class="col-md-6">
+	                    			
+	                    		</div>
+	                    	</div>
+	                    </div>
+	                </div>
+	            </div>
+            </div>
+        </div>    
    	</div>
+   	<div class="clearfix"> </div>
 </div>
 <!--inner block end here-->
 @endsection
