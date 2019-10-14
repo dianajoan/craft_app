@@ -158,7 +158,7 @@
 				<li class="dropdown profile_details_drop">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 						<div class="profile_img">	
-							<span class="prfil-img"><img src="{{ asset('files/profile/images/' . Auth::user()->profile_image) }}"  alt="user-image" style="max-width: 40px;"> </span> 
+							<span class="prfil-img"><img src="{{ asset('files/profile/images/' . Auth::user()->profile_image) }}"  alt="user-image" style="max-width: 40px; border-radius: 50%;"> </span> 
 							<div class="user-name">
 								<p>{{ Auth::user()->name }}</p>
 								<span>{{ App\Models\Role::where('name',Auth::user()->role)->first()->display_name }}</span>

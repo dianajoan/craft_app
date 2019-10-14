@@ -6,6 +6,7 @@
 <!--inner block start here-->
 <div class="inner-block">
 	<!--mainpage chit-chating-->
+	@include('layouts.shared.notifications')
 	<div class="chit-chat-layer1">
 		<div class="col-md-13 chit-chat-layer1-left">
 	        <div class="work-progres">
@@ -38,37 +39,37 @@
 		                </thead>
 	                  	<tbody>
 	                  		@if($roles)
-		                  	@foreach($roles as $role)
-			                    <tr>
-		                        	<td>{{ (($roles->currentPage() - 1 ) * $roles->perPage() ) + $loop->iteration }}</td>
-			                        <td>{{ $role->name }}</td>
-		                          	<td>{{ $role->display_name }}</td>
-		                          	<td>{{ $role->description }}</td> 
-				                	<td style="min-width: 100px;" >
-				                		<div class="row">
-				                			<div class="col-md-4">
-				                        		<a href="{{ route('roles.show', $role->id) }}" class="btn btn-block btn-success btn-xs" >View</a>
-				                        	</div>
-				                        	<div class="col-md-4">
-				                        		<a href="{{ route('roles.edit', $role->id) }}" class="btn btn-block btn-info btn-xs">Edit</a>
-				                        	</div>
-				                        	<div class="col-md-4">
-						                        <form action="{{ route('roles.destroy', $role->id) }}" method="POST">
-						                             {{ csrf_field() }}
-						                             {{ method_field('DELETE') }}
-						                           <input type="submit" class="btn btn-block btn-danger btn-xs" value="Delete" onclick="return confirm('You are deleting this row.\nAre you sure?')" />
-						                        </form>
-						                    </div>
-						                </div>
-				                    </td>         
-		                      	</tr>
-		                  	@endforeach
+		                  		<?php $i=0; ?>
+			                  	@foreach($roles as $role)
+				                    <tr>
+			                        	<td>{{ ++$i }}</td>
+				                        <td>{{ $role->name }}</td>
+			                          	<td>{{ $role->display_name }}</td>
+			                          	<td>{{ $role->description }}</td> 
+					                	<td style="min-width: 100px;" >
+					                		<div class="row">
+					                			<div class="col-md-4">
+					                        		<a href="{{ route('roles.show', $role->id) }}" class="btn btn-block btn-success btn-xs" >View</a>
+					                        	</div>
+					                        	<div class="col-md-4">
+					                        		<a href="{{ route('roles.edit', $role->id) }}" class="btn btn-block btn-info btn-xs">Edit</a>
+					                        	</div>
+					                        	<div class="col-md-4">
+							                        <form action="{{ route('roles.destroy', $role->id) }}" method="POST">
+							                             {{ csrf_field() }}
+							                             {{ method_field('DELETE') }}
+							                           <input type="submit" class="btn btn-block btn-danger btn-xs" value="Delete" onclick="return confirm('You are deleting this row.\nAre you sure?')" @role(['super-admin']) @else disabled @endrole />
+							                        </form>
+							                    </div>
+							                </div>
+					                    </td>         
+			                      	</tr>
+			                  	@endforeach
 		                    @else
 		                        <p class="text-center text-primary">No Roles created Yet!</p>
 		                    @endif
               			</tbody>
           			</table>
-          			{!! $roles->links() !!}
             	</div>
         	</div>
 		</div>

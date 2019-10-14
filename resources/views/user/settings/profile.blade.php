@@ -14,13 +14,14 @@
 	            <li class="breadcrumb-item active" aria-current="page"> <i class="fa fa-user"></i> User Profile Details </li>
             </ol>
         </div>
-    	<h2><small>Show User</small></h2>
+    	<h2><small>My Profile</small></h2>
         @include('layouts.shared.notifications')	 
 	 	<div class="row">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title"> <img src="{{ asset('files/profile/images/'. $user->profile_image) }}" style="max-width: 30px; border-radius: 50%;"> {{ $user->name }} - My Profile Settings | {{ config('app.name') }}</h4>
+                        <hr>
 						<ul class="nav nav-tabs">
 						    <li class="active"><a data-toggle="tab" href="#one">My Wall</a></li>
 						    <li><a data-toggle="tab" href="#two">My Information</a></li>
@@ -39,6 +40,18 @@
 	                                            {{ session('success') }}
 	                                        </div>
 	                                    @endif
+
+	                                    <div class="form-control">
+	                                    	<div>
+	                                    		<span>Your account was previously updated on {{ Auth::user()->updated_at }} </span>
+	                                    	</div>
+	                                    </div>
+	                                    <div class="form-control">
+	                                    	<div>
+
+	                                    		<span>Your account was created on {{ config('app.name') }} on {{ Auth::user()->created_at }}</span>
+	                                    	</div>
+	                                    </div>
 	                                </div>
 								</div>
 							</div>
