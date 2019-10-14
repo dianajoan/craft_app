@@ -95,6 +95,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                
             });                       
         });
+        @media only screen and (min-width: 800px) {
+            .header-right, .header-left {
+                max-height: 42px;
+            }
+        }
     </script>
 <!--geo chart-->
 
