@@ -4,8 +4,9 @@
 
 <div class="inner-block">
     <div class="inbox">
-    	<h2>Roles Details</h2>   	 
-	 	<div class="col-md-13 compose-right">
+    	<h2><small>Roles Details</small></h2>
+    	@include('layouts.shared.notifications')
+	 	<div class="col-md-8 compose-right">
 			<div class="inbox-details-default">
 				<div class="alert alert-info inbox-details-heading">
 					Editing 
@@ -49,13 +50,24 @@
 
 				        <div class="form-group">
 				        	<label for="display_name">Description</label>
-					        <textarea rows="6"  name="description" id="description">
+					        <textarea rows="2"  name="description" id="description">
 					        	{{ $role->description }}
 							</textarea>
 						</div>
-
-				        <a href="{{ route('roles.index') }}" class="btn btn-primary-outline">Cancel</a>
+						<div class="form-group">
+                            <label for="display">Permissions :</label>
+                            <div class="row">
+                                <div class="col-md-4"> </div>
+                                <div class="col-md-8" style="max-height: 300px; overflow-y: auto;">
+                                    @foreach($permissions as $permission)
+                                        <input type="checkbox"{{ in_array($permission->id, $permission_role)?"checked":"" }} name="permission[]" value="{{ $permission->id }}" id="permckbx"> <label for="permckbx">{{ $permission->display_name }} </label> <br>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                        
 				        <button type="submit" class="btn btn-primary-outline">Update</button>
+				        <a href="{{ route('roles.index') }}" onclick="confirm('You are deleting all changes\nIs this okay?')" class="btn btn-primary-outline">Cancel</a>
 				      </form>
 					</div>
 				</div>
