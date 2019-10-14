@@ -216,6 +216,7 @@ a{
 .btn-1 {
   background: #e02c26;
   font-weight: 100;
+  min-width: 150px;
 }
 .btn-1 svg {
   height: 45px;
@@ -252,6 +253,7 @@ a{
   outline-offset: 0px;
   text-shadow: none;
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  min-width: 150px;
 }
 
 .btn-5:hover {

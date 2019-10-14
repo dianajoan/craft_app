@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Home')
+@section('title') Home @endsection
 
 @section('content')
 
@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-sm-12 head">
         <div class="logo">
-          <img src="https://i.ibb.co/XynTSFb/craftlogo.jpg" alt="Craft Logo" />
+          <img src="https://i.ibb.co/XynTSFb/craftlogo.jpg" alt="Craft Logo" style="border-radius: 10px; width: 100px; height: 100px;" />
         </div>
         <h1 class="stm-font">Creativity and Innovation</h1>
       </div>

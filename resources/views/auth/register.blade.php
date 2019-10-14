@@ -17,7 +17,7 @@
           @csrf 
           <div class="icon1">
             <span class="fa fa-user" {{ $errors->has('name') ? ' is-invalid' : '' }}></span>
-            <input type="text" name="name" value="{{ old('email') }}" placeholder="Full name" required=""/>
+            <input type="text" name="name" value="{{ old('name') }}" placeholder="Full Names" required/>
 
             @if ($errors->has('name'))
                 <span class="invalid-feedback" role="alert">
@@ -28,7 +28,7 @@
           </div>
           <div class="icon1">
             <span class="fa fa-user" {{ $errors->has('email') ? ' is-invalid' : '' }}></span>
-            <input type="email" name="email" value="{{ old('email') }}" placeholder="Email Address" required=""/>
+            <input type="email" name="email" value="{{ old('email') }}" placeholder="Email Address" required />
 
             @if ($errors->has('email'))
                 <span class="invalid-feedback" role="alert">
@@ -70,14 +70,6 @@
             <div class="clear"></div>
           </div>
         </form> 
-      </div>
-      <div class="social">
-        <ul>
-          <li>or login using : </li>
-          <li><a href="#" class="facebook"><span class="fa fa-facebook"></span></a></li>
-          <li><a href="#" class="twitter"><span class="fa fa-twitter"></span></a></li>
-          <li><a href="#" class="google"><span class="fa fa-google-plus"></span></a></li>
-        </ul>
       </div>
     </div>
     

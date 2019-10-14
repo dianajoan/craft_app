@@ -25,15 +25,15 @@ class RolesTableSeeder extends Seeder
         $role_admin->save();
 
         $role_registra = new Role();
-        $role_registra->name = 'registra';
-        $role_registra->display_name = 'Registra';
-        $role_registra->description = 'A managing registra';
+        $role_registra->name = 'designer';
+        $role_registra->display_name = 'Craft Designer';
+        $role_registra->description = 'An art making user for marketing';
         $role_registra->save();
 
         $role_clerk = new Role();
-        $role_clerk->name = 'clerk';
-        $role_clerk->display_name = 'Data Clerk';
-        $role_clerk->description = 'The first data entrant at the reception';
+        $role_clerk->name = 'editor';
+        $role_clerk->display_name = 'Content Editor';
+        $role_clerk->description = 'A user with editing rights of content';
         $role_clerk->save();
 
         $role_user = new Role();
