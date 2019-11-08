@@ -1,8 +1,3 @@
-<!--Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -95,6 +90,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                
             });                       
         });
+        @media only screen and (min-width: 800px) {
+            .header-right, .header-left {
+                max-height: 42px;
+            }
+        }
     </script>
 <!--geo chart-->
 
