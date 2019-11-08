@@ -60,7 +60,8 @@ This is how you can install this project on your local machine, computer or just
 
 
 6. Create the database:
- 	```php artisan migrate
+ 	```
+       php artisan migrate
        php artisan db:seed or 
        php artisan migrate --seed
     ```
