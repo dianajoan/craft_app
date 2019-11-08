@@ -51,7 +51,7 @@ This is how you can install this project on your local machine, computer or just
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
-    DB_DATABASE=db_ursb
+    DB_DATABASE=db_craft
     DB_USERNAME=root
     DB_PASSWORD=password
     either use the bash command to use a fresh database
