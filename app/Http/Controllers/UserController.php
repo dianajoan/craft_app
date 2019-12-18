@@ -11,7 +11,7 @@ use App\Models\Role;
 use App\User;
 use Auth;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
     /**
      * Display the constructor of the resource.
@@ -21,6 +21,9 @@ class UsersController extends Controller
     public function __construct()
     {
         $this->middleware('role:super-admin|admin')->except('update','changePassword','show');
+        $this->middleware('permission:create_user',['only'=>['create','store']]);
+        $this->middleware('permission:delete_user',['only'=>'destroy']);
+        $this->middleware('permission:edit_user',['only'=>['update','edit']]);
     }
 
     /**
@@ -69,7 +72,7 @@ class UsersController extends Controller
     public function index()
     {
         $roles = Role::all();
-        $users = User::latest()->paginate();
+        $users = User::latest()->paginate(5);
         return view('admin.users.index', compact(['users','roles']));
     }
 
@@ -81,8 +84,7 @@ class UsersController extends Controller
     public function create()
     {
         $roles = Role::all();
-        $users = User::latest()->paginate();
-        return view('admin.users.create', compact(['roles','users']));
+        return view('admin.users.create', compact('roles'));
     }
 
     /**
@@ -154,18 +156,21 @@ class UsersController extends Controller
             'role'      =>  'required',
         ]);
         
-        // User::find($id)->update($request->all());
         $user  = User::find($id);
         $user->name     = $request->name;
+        $user->role     = $request->role;
         $user->email    = $request->email;
-        $user->username   = $request->username;
         $user->gender   = $request->gender;
         $user->telephone     = $request->telephone;
-        $user->role     = $request->role;
-        $user->location = $request->location;
+        $user->place_of_work = $request->place_of_work;
         $user->nationality  = $request->nationality;
         $user->occupation   = $request->occupation;
         $user->date_of_birth     = $request->date_of_birth;
+        $user->work_address  = $request->work_address;
+        $user->bio      = $request->bio;
+        $user->home_address    = $request->home_address;
+        $user->email_notifications   = $request->email_notifications;
+        // $user->whatsapp_number  = $request->whatsapp_number;
         $user->status   = $request->status;
         $user->save();
 

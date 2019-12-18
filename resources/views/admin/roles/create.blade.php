@@ -1,4 +1,4 @@
-@extends('layouts.backendmaster')
+@extends('layouts.admin-master')
 @section('title', 'Create A New Role')
 @section('content')
 
