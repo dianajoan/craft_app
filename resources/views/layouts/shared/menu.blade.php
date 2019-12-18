@@ -60,14 +60,17 @@
 			<ul class="menu_mm">
 				<li class="menu_mm"><a href="{{ route('home') }}">home</a></li>
 				<li class="menu_mm"><a href="{{ route('all-products') }}">products</a></li>
-				<li class="menu_mm"><a href="#">categories</a></li>
-				<li class="menu_mm"><a href="{{ route('contact') }}">contact</a></li>
 
 				@if(Auth::check())
 
 				<li class="menu_mm"><a href="#">{{ Auth::user()->name }}</a></li>
 				<li class="menu_mm"><a href="{{route('user.profile')}}">profile</a></li>
-				<li class="menu_mm"><a href="{{ route('logout') }}">logout</a></li>
+				<li class="menu_mm">
+					<a href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
+					</a>
+
+					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>
+				</li>
 
 				@else
 
@@ -75,7 +78,7 @@
 				<li class="menu_mm"><a href="{{ route('register') }}">register</a></li>
 
 				@endif
-				
+
 			</ul>
 		</nav>
 		<div class="menu_extra">

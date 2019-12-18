@@ -3,19 +3,20 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Auth\MustVerifyEmail;
-use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+// use Laravel\Passport\HasApiTokens;
+use App\Models\Role;
+use App\Models\Product;
 use App\Models\Category;
 use App\Models\Order;
-use App\Models\Product;
-use App\Models\Role;
 
-class User extends Authenticatable implements MustVerifyEmailContract
+class User extends Authenticatable 
 {
-    use EntrustUserTrait;
     use Notifiable;
+    // use HasApiTokens;
+    use EntrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -23,9 +24,9 @@ class User extends Authenticatable implements MustVerifyEmailContract
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'email_notifications', 'role', 
-        'profile_image', 'gender', 'date_of_birth', 'telephone', 'nationality', 
-        'occupation', 'place_of_work', 'work_address', 'home_address', 'bio', 'status',
+        'name', 'email', 'password', 'username', 'telephone',
+        'gender', 'profile_image', 'date_of_birth', 'level',
+        'nationality', 'location', 'role', 'occupation', 'status',
     ];
 
     /**

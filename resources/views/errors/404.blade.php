@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title') >Page not found @endsection
+@section('title') Page not found @endsection
 
 @section('content')
 

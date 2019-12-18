@@ -16,13 +16,17 @@
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li><a href="{{ route('home') }}">home</a></li>
 					<li><a href="{{ route('all-products') }}">products</a></li>
-					<li><a href="#">categories</a></li>
 
 					@if(Auth::check())
 
 					<li><a href="#">{{ Auth::user()->name }}</a></li>
 					<li><a href="{{route('user.profile')}}">profile</a></li>
-					<li><a href="{{ route('logout') }}">logout</a></li>
+					<li>
+						<a href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
+						</a>
+
+						<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>
+					</li>
 
 					@else
 

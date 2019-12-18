@@ -60,20 +60,24 @@
 		<!-- Sidebar Navigation -->
 		<nav class="sidebar_nav">
 			<ul>
-				<li><a href="{{ route('home') }}">home<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="{{ route('all-products') }}">products<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="#">categories<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="{{ route('home') }}">home</a></li>
+				<li><a href="{{ route('all-products') }}">products</a></li>
 
 				@if(Auth::check())
 
 				<li><a href="#">{{ Auth::user()->name }}</a></li>
-				<li><a href="{{route('user.profile')}}">profile<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="{{ route('logout') }}">logout<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="{{route('user.profile')}}">profile</a></li>
+				<li>
+					<a href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
+					</a>
+
+					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>
+				</li>
 
 				@else
 
-				<li><a href="{{ route('login') }}">login<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="{{ route('register') }}">register<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="{{ route('login') }}">login</a></li>
+				<li><a href="{{ route('register') }}">register</a></li>
 
 				@endif
 
@@ -98,7 +102,5 @@
 					</div>
 				</a>
 			</div>
-			<div class="cart_text">bag</div>
-			<div class="cart_price">$39.99 (1)</div>
 		</div>
 	</div>
