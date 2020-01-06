@@ -18,7 +18,7 @@
     <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
     <!--static chart-->
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
+    <link rel="shortcut icon" href="{!! asset('frontend/img/favicon.ico') !!}">
     <script src="{!! asset('backend/js/Chart.min.js') !!}"></script> 
     <!--//charts-->
     <!-- geo chart -->

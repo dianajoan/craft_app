@@ -3,9 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Category;
-use App\Models\Product;
-use App\User;
 
 class Order extends Model
 {
@@ -28,10 +25,7 @@ class Order extends Model
         'categories_id',
         'product_id',
         'status'
-    ];
-
-
- 
+    ]; 
 
     /**
      * The string variable is for the table.
@@ -66,6 +60,4 @@ class Order extends Model
     {
         return $this->belongsTo(Category::class);
     }
-
-
 }

@@ -14,7 +14,7 @@
 			<!-- Navigation -->
 			<nav class="header_nav">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
-					<li><a href="{{ route('home') }}">home</a></li>
+					<li><a href="{{ url('/') }}">home</a></li>
 					<li><a href="{{ route('all-products') }}">products</a></li>
 
 					@if(Auth::check())

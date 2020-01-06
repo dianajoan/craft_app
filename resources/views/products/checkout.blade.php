@@ -3,6 +3,23 @@
 
 @section('content')
 
+
+<div class="home">
+	<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ asset('frontend/images/product_background.jpg') }}" data-speed="0.8"></div>
+	<div class="home_container">
+		<div class="home_content">
+			<div class="home_title">Checkout</div>
+			<div class="breadcrumbs">
+				<ul class="d-flex flex-row align-items-center justify-content-start">
+					<li><a href="{{ url('/') }}">Home</a></li>
+					<li><a href="{{route('product.cart')}}">Your Cart</a></li>
+					<li>Checkout</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- Checkout -->
 
 	<div class="checkout">
@@ -70,7 +87,7 @@
 										<div>
 											<!-- Email -->
 											<label for="checkout_email">Email Address*</label>
-											<input type="phone" id="checkout_email" value="{{ auth()->user()->email }}" class="checkout_input" required="required">
+											<input type="phone" id="checkout_email" value="{{ auth()->user()->email }}" class="checkout_input" disabled="">
 										</div>
 										<div class="checkout_extra">
 											<ul>

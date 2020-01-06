@@ -20,7 +20,7 @@
 	<!-- Custom Theme files -->
 	<link href="{!! asset('style.css') !!}" rel="stylesheet" type="text/css" media="all" />
 	<link href="{!! asset('css/font-awesome.min.css') !!}" rel="stylesheet" type="text/css" media="all" />
-	<link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
+	<link rel="shortcut icon" href="{!! asset('frontend/img/favicon.ico') !!}">
 	<!-- //Custom Theme files -->
 
 	<!-- web font -->

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="inner-block">
-	@include('layouts.shared.notifications')
+	@include('layouts.shared.notification')
 	<div class="row banner center" style="min-height: 400px;">
 		<div class="col-md-3 text-center compose-right">
 			<div class="inbox-details-default">

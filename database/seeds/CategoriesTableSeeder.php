@@ -12,29 +12,25 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-
-        $category = new Category();
-        $category->name = 'Women';
+        $category = new Category(); 
+        $category->name = 'women'; // name must all be lower case just as roles
         $category->type = 'women';
-        $category->display_name = 'Women';
+        $category->display_name = 'Women Products';
         $category->description = 'These are women Products';
         $category->save();
 
         $category = new Category();
-        $category->name = 'Men';
+        $category->name = 'men';
         $category->type = 'men';
-        $category->display_name = 'Men';
+        $category->display_name = 'Men Products';
         $category->description = 'These are men Products';
         $category->save();
 
         $category = new Category();
-        $category->name = 'Children';
+        $category->name = 'children';
         $category->type = 'children';
-        $category->display_name = 'Children';
+        $category->display_name = 'Children Products';
         $category->description = 'These are children Products';
         $category->save();
-
-        
-
     }
 }

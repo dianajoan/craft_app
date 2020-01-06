@@ -261,6 +261,5 @@ class PermissionsTableSeeder extends Seeder
         foreach ($permissions as $key => $value) {
             Permission::create($value);
         }
-
     }
 }

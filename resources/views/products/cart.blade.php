@@ -3,6 +3,21 @@
 
 @section('content')
 
+<div class="home">
+	<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ asset('frontend/images/product_background.jpg') }}" data-speed="0.8"></div>
+	<div class="home_container">
+		<div class="home_content">
+			<div class="home_title">Cart</div>
+			<div class="breadcrumbs">
+				<ul class="d-flex flex-row align-items-center justify-content-start">
+					<li><a href="{{ url('/') }}">Home</a></li>
+					<li>Your Cart</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- Cart -->
 
  @if(Session::has('cart'))
@@ -21,7 +36,6 @@
 									<li>Product</li>
 									<li>Price</li>
 									<li>Quantity</li>
-									<li>Total</li>
 								</ul>
 							</div>
 
@@ -38,14 +52,27 @@
 										<div class="product_color text-lg-center product_text">
 											{{ ++$i }}
 										</div>
+
 										<div class="product_color text-lg-center product_text">
 											{{$product['item']['name']}}
 										</div>
-										<div class="product_color text-lg-center product_text">
+						
+										<div class="product_price text-lg-center product_text">
 											${{$product['item']['current_price']}}
 										</div>
-										<div class="product_color text-lg-center product_text">
-											{{$product['qty']}}
+
+										<div class="product_quantity_container">
+											<div class="product_quantity ml-lg-auto mr-lg-auto text-center">
+												<span class="product_text product_num">
+													{{$product['qty']}}
+												</span>
+												<div class="qty_sub qty_button trans_200 text-center">
+													<span>-</span>
+												</div>
+												<div class="qty_add qty_button trans_200 text-center">
+													<span>+</span>
+												</div>
+											</div>
 										</div>
 									</li>
 								</ul>

@@ -66,7 +66,7 @@
 				@if(Auth::check())
 
 				<li><a href="#">{{ Auth::user()->name }}</a></li>
-				<li><a href="{{route('user.profile')}}">profile</a></li>
+				<li><a href="#">profile</a></li>
 				<li>
 					<a href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
 					</a>

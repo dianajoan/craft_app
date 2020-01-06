@@ -21,7 +21,7 @@
                 <div class="home_discount_text">Discount on the</div>
               </div>
               <div class="home_title">New Collection</div>
-              <div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+              <div class="button button_1 home_button trans_200"><a href="{{ route('all-products') }}">Shop NOW!</a></div>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
                 <div class="home_discount_text">Discount on the</div>
               </div>
               <div class="home_title">New Collection</div>
-              <div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+              <div class="button button_1 home_button trans_200"><a href="{{ route('all-products') }}">Shop NOW!</a></div>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@
                 <div class="home_discount_text">Discount on the</div>
               </div>
               <div class="home_title">New Collection</div>
-              <div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+              <div class="button button_1 home_button trans_200"><a href="{{ route('all-products') }}">Shop NOW!</a></div>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
           <div class="col-lg-4 box_col">
             <div class="box">
               <div class="box_image"><img src="{{ asset('frontend/images/box_1.jpg') }}" alt=""></div>
-              <div class="box_title trans_200"><a href="categories.html">summer collection</a></div>
+              <div class="box_title trans_200"><a href="{{ route('all-products') }}">summer collection</a></div>
             </div>
           </div>
 
@@ -84,7 +84,7 @@
           <div class="col-lg-4 box_col">
             <div class="box">
               <div class="box_image"><img src="{{ asset('frontend/images/box_2.jpg') }}" alt=""></div>
-              <div class="box_title trans_200"><a href="categories.html">eyewear collection</a></div>
+              <div class="box_title trans_200"><a href="{{ route('all-products') }}">eyewear collection</a></div>
             </div>
           </div>
 
@@ -92,7 +92,7 @@
           <div class="col-lg-4 box_col">
             <div class="box">
               <div class="box_image"><img src="{{ asset('frontend/images/box_3.jpg') }}" alt=""></div>
-              <div class="box_title trans_200"><a href="categories.html">basic pieces</a></div>
+              <div class="box_title trans_200"><a href="{{ route('all-products') }}">basic pieces</a></div>
             </div>
           </div>
 
@@ -110,9 +110,9 @@
           <div class="col text-center">
             <div class="categories_list_container">
               <ul class="categories_list d-flex flex-row align-items-center justify-content-start">
-                <li><a href="categories.html">new arrivals</a></li>
-                <li><a href="categories.html">recommended</a></li>
-                <li><a href="categories.html">best sellers</a></li>
+                <li><a href="{{ route('all-products') }}">new arrivals</a></li>
+                <li><a href="{{ route('all-products') }}">recommended</a></li>
+                <li><a href="{{ route('all-products') }}">best sellers</a></li>
               </ul>
             </div>
           </div>

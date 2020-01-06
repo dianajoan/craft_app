@@ -2,7 +2,7 @@
 <div class="header-main">
 	<div class="header-left" style="">
 		<div class="logo-name">
-			<a href="{{ url('/admin') }}"> <h3>{{ config('app.name') }}</h3> 
+			<a href="{{ url('/') }}"> <h3>{{ config('app.name') }}</h3> 
 			<!--<img id="logo" src="" alt="Logo"/>--> 
 		  	</a> 								
 		</div>
@@ -27,7 +27,7 @@
 							</div>
 						</li>
 						<li><a href="#">
-						   <div class="user_img"><img src="{!! asset('dash/images/p4.png') !!}" alt=""></div>
+						   <div class="user_img"><img src="{!! asset('backend/dash/images/p4.png') !!}" alt=""></div>
 						   <div class="notification_desc">
 							<p>Lorem ipsum dolor</p>
 							<p><span>1 hour ago</span></p>
@@ -35,7 +35,7 @@
 						   <div class="clearfix"></div>	
 						</a></li>
 						<li class="odd"><a href="#">
-							<div class="user_img"><img src="{!! asset('dash/images/p2.png') !!}" alt=""></div>
+							<div class="user_img"><img src="{!! asset('backend/dash/images/p2.png') !!}" alt=""></div>
 						   <div class="notification_desc">
 							<p>Lorem ipsum dolor </p>
 							<p><span>1 hour ago</span></p>
@@ -43,7 +43,7 @@
 						  <div class="clearfix"></div>	
 						</a></li>
 						<li><a href="#">
-						   <div class="user_img"><img src="{!! asset('dash/images/p3.png') !!}" alt=""></div>
+						   <div class="user_img"><img src="{!! asset('backend/dash/images/p3.png') !!}" alt=""></div>
 						   <div class="notification_desc">
 							<p>Lorem ipsum dolor</p>
 							<p><span>1 hour ago</span></p>
@@ -66,7 +66,7 @@
 							</div>
 						</li>
 						<li><a href="#">
-							<div class="user_img"><img src="{!! asset('dash/images/p5.png') !!}" alt=""></div>
+							<div class="user_img"><img src="{!! asset('backend/dash/images/p5.png') !!}" alt=""></div>
 						   <div class="notification_desc">
 							<p>Lorem ipsum dolor</p>
 							<p><span>1 hour ago</span></p>
@@ -74,7 +74,7 @@
 						  <div class="clearfix"></div>	
 						 </a></li>
 						 <li class="odd"><a href="#">
-							<div class="user_img"><img src="{!! asset('dash/images/p6.png') !!}" alt=""></div>
+							<div class="user_img"><img src="{!! asset('backend/dash/images/p6.png') !!}" alt=""></div>
 						   <div class="notification_desc">
 							<p>Lorem ipsum dolor</p>
 							<p><span>1 hour ago</span></p>
@@ -82,7 +82,7 @@
 						   <div class="clearfix"></div>	
 						 </a></li>
 						 <li><a href="#">
-							<div class="user_img"><img src="{!! asset('dash/images/p7.png') !!}" alt=""></div>
+							<div class="user_img"><img src="{!! asset('backend/dash/images/p7.png') !!}" alt=""></div>
 						   <div class="notification_desc">
 							<p>Lorem ipsum dolor</p>
 							<p><span>1 hour ago</span></p>
@@ -158,10 +158,9 @@
 				<li class="dropdown profile_details_drop">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 						<div class="profile_img">	
-							<span class="prfil-img"><img src="{{ asset('files/profile/images/' . Auth::user()->profile_image) }}"  alt="user-image" style="max-width: 40px; border-radius: 50%;"> </span> 
+							<span class="prfil-img"><img src="#"  alt="user-image" style="max-width: 40px; border-radius: 50%;"> </span> 
 							<div class="user-name">
 								<p>{{ Auth::user()->name }}</p>
-								<span>{{ App\Models\Role::where('name',Auth::user()->role)->first()->display_name }}</span>
 							</div>
 							<i class="fa fa-angle-down lnr"></i>
 							<i class="fa fa-angle-up lnr"></i>

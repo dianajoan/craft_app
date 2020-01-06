@@ -3,8 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Category;
-use App\User;
 
 class Product extends Model
 {
@@ -40,6 +38,4 @@ class Product extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-    
 }

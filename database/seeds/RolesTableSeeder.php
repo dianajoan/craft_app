@@ -46,6 +46,5 @@ class RolesTableSeeder extends Seeder
         foreach ($permissions as $perm) {
             $owner->attachPermission($perm);
         }
-        
     }
 }
