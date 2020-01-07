@@ -1,13 +1,13 @@
 @extends('layouts.base')
 
-@section('title', 'Login')
+@section('title') Login @endsection
 
 @section('content')
 
 <!-- main -->
 <div class="w3layouts-main"> 
   <div class="bg-layer">
-    <h1>{{ __('Login') }}</h1>
+    <h1>{{ __('Login') }} <a href="{{ url('/') }}" style="font-size: 25px; color: #00FF7F;">{{ config('app.name') }}</a></h1>
     <div class="header-main">
       <div class="main-icon">
         <span class="fa fa-eercast"></span>
@@ -54,7 +54,7 @@
     
     <!-- copyright -->
     <div class="copyright">
-      <p>© 2019 {{ config('app.name') }} . All rights reserved | Design by <a href="https://dianajoan.github.io/" target="_blank">Diana Joanita</a></p>
+      <p>&copy;<script>document.write(new Date().getFullYear());</script> {{ config('app.name') }} . All rights reserved | Design by <a href="https://dianajoan.github.io/" target="_blank">Diana Joanita</a></p>
     </div>
     <!-- //copyright --> 
   </div>

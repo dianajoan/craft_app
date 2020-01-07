@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
     <meta charset="UTF-8">
-    <title>{{ config('app.name') }} | Welcome</title>
+    <title>{{ config('app.name') }} | Shop with us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <link rel="icon" type="image/ico" sizes="16x16" href="{{ asset('img/favicon.ico') }}">
@@ -27,7 +27,7 @@
                             {{ __('Login') }}
                         </a>
                         <a href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('login-form').submit();" class="btn btn-5" style="text-shadow: 1px 1px brown;">
-                            {{ __('Guest..') }}
+                            {{ __('Guest') }}
                         </a>
 
                         <form id="login-form" action="{{ route('login') }}" method="POST" style="display: none;">

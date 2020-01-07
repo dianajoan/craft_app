@@ -173,7 +173,7 @@ a{
     }
   }
 }
-
+ 
 
 .container {
   align-items: center;
@@ -181,7 +181,7 @@ a{
   flex-direction: column;
   justify-content: center;
   padding: 2px;
-  margin: 20px;
+  margin: 90px 0px 0px 0px;
   text-align: center;
 }
 @media (min-width: 600px) {
