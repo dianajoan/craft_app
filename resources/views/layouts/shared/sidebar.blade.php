@@ -54,7 +54,7 @@
 
 		<!-- Logo -->
 		<div class="sidebar_logo">
-			<a href="#"><div><span>{{ config('app.name') }}</span></div></a>
+			<a href="{{ url('/') }}"><div><span>{{ config('app.name') }}</span></div></a>
 		</div>
 
 		<!-- Sidebar Navigation -->
