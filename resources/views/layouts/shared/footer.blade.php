@@ -35,7 +35,7 @@
               <div class="footer_about">
                 <!-- Logo -->
                 <div class="sidebar_logo">
-                  <a href="#"><div>E-Craft</span></div></a>
+                  <a href="{{ url('/') }}"><div>E-Craft</span></div></a>
                 </div>
                 <div class="footer_about_text">
                   <p>This is an online shopping craft where customers make orders, make payments and deliveries are processed. Join Us today and change your life.</p>

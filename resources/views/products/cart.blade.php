@@ -32,10 +32,11 @@
 							<!-- Cart Bar -->
 							<div class="cart_bar">
 								<ul class="cart_bar_list item_list d-flex flex-row align-items-center justify-content-start">
-									<li>#</li>
+									<li>Your Cart</li>
 									<li>Product</li>
 									<li>Price</li>
 									<li>Quantity</li>
+									<li>Actions</li>
 								</ul>
 							</div>
 
@@ -53,7 +54,7 @@
 											{{ ++$i }}
 										</div>
 
-										<div class="product_color text-lg-center product_text">
+										<div class="product_size text-lg-center product_text">
 											{{$product['item']['name']}}
 										</div>
 						
@@ -66,13 +67,19 @@
 												<span class="product_text product_num">
 													{{$product['qty']}}
 												</span>
-												<div class="qty_sub qty_button trans_200 text-center">
-													<span>-</span>
-												</div>
-												<div class="qty_add qty_button trans_200 text-center">
-													<span>+</span>
-												</div>
 											</div>
+										</div>
+										<div class="product_price text-lg-center product_text">
+												
+											<a href="#">
+												<i class="fa fa-eye" aria-hidden="true"></i>
+											</a>
+											<a href="{{route('product.remove', ['id' => $product['item']['id']])}}">
+												<i class="fa fa-trash" aria-hidden="true"></i>
+											</a>
+											<a href="#">
+												<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+											</a>
 										</div>
 									</li>
 								</ul>
@@ -86,10 +93,7 @@
 									<div class="button button_continue trans_200">
 										<a href="{{ route('all-products') }}">continue shopping</a>
 									</div>
-									<div class="button button_clear trans_200">
-										<a href="{{route('product.remove', ['id' => $product['item']['id']])}}">clear cart</a>
-									</div>
-									<div class="button button_update trans_200"><a href="#">update cart</a></div>
+									
 								</div>
 							</div>
 						</div>
@@ -102,12 +106,64 @@
 			<div class="container">
 				<div class="row">
 
+					<!-- Shipping & Delivery -->
+					<div class="col-xxl-6">
+						<div class="cart_extra cart_extra_1">
+							<div class="cart_extra_content cart_extra_coupon">
+								<div class="cart_extra_title">Coupon code</div>
+								<div class="coupon_form_container">
+									<form action="#" id="coupon_form" class="coupon_form">
+										<input type="text" class="coupon_input" required="required">
+										<button class="coupon_button">apply code</button>
+									</form>
+								</div>
+								<div class="shipping">
+									<div class="cart_extra_title">Shipping Method</div>
+									<ul>
+										<li class="shipping_option d-flex flex-row align-items-center justify-content-start">
+											<label class="radio_container">
+												<input type="radio" id="radio_1" name="shipping_radio" class="shipping_radio">
+												<span class="radio_mark"></span>
+												<span class="radio_text">Next day delivery</span>
+											</label>
+											<div class="shipping_price ml-auto">$4.99</div>
+										</li>
+										<li class="shipping_option d-flex flex-row align-items-center justify-content-start">
+											<label class="radio_container">
+												<input type="radio" id="radio_2" name="shipping_radio" class="shipping_radio">
+												<span class="radio_mark"></span>
+												<span class="radio_text">Standard delivery</span>
+											</label>
+											<div class="shipping_price ml-auto">$1.99</div>
+										</li>
+										<li class="shipping_option d-flex flex-row align-items-center justify-content-start">
+											<label class="radio_container">
+												<input type="radio" id="radio_3" name="shipping_radio" class="shipping_radio" checked>
+												<span class="radio_mark"></span>
+												<span class="radio_text">Personal Pickup</span>
+											</label>
+											<div class="shipping_price ml-auto">Free</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<!-- Cart Total -->
 					<div class="col-xxl-6">
 						<div class="cart_extra cart_extra_2">
 							<div class="cart_extra_content cart_extra_total">
 								<div class="cart_extra_title">Cart Total</div>
 								<ul class="cart_extra_total_list">
+									<li class="d-flex flex-row align-items-center justify-content-start">
+										<div class="cart_extra_total_title">Subtotal</div>
+										<div class="cart_extra_total_value ml-auto">$29.90</div>
+									</li>
+									<li class="d-flex flex-row align-items-center justify-content-start">
+										<div class="cart_extra_total_title">Shipping</div>
+										<div class="cart_extra_total_value ml-auto">Free</div>
+									</li>
 									<li class="d-flex flex-row align-items-center justify-content-start">
 										<div class="cart_extra_total_title">Total</div>
 										<div class="cart_extra_total_value ml-auto">${{$totalPrice}}</div>
