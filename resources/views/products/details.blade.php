@@ -11,8 +11,7 @@
 			<div class="breadcrumbs">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li><a href="{{ url('/') }}">Home</a></li>
-					<li><a href="#">Woman</a></li>
-					<li><a href="#">Accessories</a></li>
+					<li><a href="{{route('product.cart')}}">Your Cart</a></li>
 					<li>{{$product->name}}</li>
 				</ul>
 			</div>
@@ -33,7 +32,7 @@
 							<div class="products_bar_content d-flex flex-row align-items-center justify-content-start">
 								<div class="product_categories">
 									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
-										<li class="active"><a href="#">All</a></li>
+										<li class="active"><a href="{{ route('all-products') }}">All</a></li>
 										<li><a href="#">Hot Products</a></li>
 										<li><a href="#">New Products</a></li>
 										<li><a href="#">Sale Products</a></li>
@@ -56,19 +55,20 @@
 								<div class="product_content_inner">
 									<div class="product_image_row d-flex flex-md-row flex-column align-items-md-end align-items-start justify-content-start">
 										<div class="product_image_1 product_image">
-											<img src="{{$product->imagePath}}" alt="">
+											<img src="{{ asset('frontend/images/product_single_1.jpg') }}" alt="">
 										</div>
-										<div class="product_image_2 product_image"><img src="{{$product->imagePath}}" alt=""></div>
+										<div class="product_image_2 product_image"><img src="{{ asset('frontend/images/product_single_2.jpg') }}" alt=""></div>
 									</div>
 									<div class="product_image_row">
-										<div class="product_image_3 product_image"><img src="{{$product->imagePath}}" alt=""></div>
+										<div class="product_image_3 product_image"><img src="{{ asset('frontend/images/product_single_3.jpg') }}" alt=""></div>
 									</div>
 									<div class="product_image_row d-flex flex-md-row flex-column align-items-start justify-content-start">
-										<div class="product_image_4 product_image"><img src="{{$product->imagePath}}" alt=""></div>
-										<div class="product_image_5 product_image"><img src="{{$product->imagePath}}" alt=""></div>
+										<div class="product_image_4 product_image"><img src="{{ asset('frontend/images/product_single_4.jpg') }}" alt=""></div>
+										<div class="product_image_5 product_image"><img src="{{ asset('frontend/images/product_single_5.jpg') }}" alt=""></div>
 									</div>
 								</div>
 							</div>
+							
 							<div class="product_sidebar order-lg-2 order-1">
 
 								<form action="{{route('product.addToCart', ['id' => $product->id])}}" id="product_form" class="product_form">
@@ -85,11 +85,12 @@
 						                    </div>
 						                @endif
 
-
+						            <div class="product_image_1 product_image">
+										<img src="{{$product->imagePath}}" alt="">
+									</div>
 									<div class="product_name">{{$product->name}}</div>
 									<div class="product_price">${{$product->current_price}}</div>
-									<div class="product_color">Color: <span>Brown</span></div>
-									<p>{{$product->description}}</p>
+									<div class="product_color">Description: <span>{{$product->description}}</span></div>
 									<div class="product_size">
 										<div class="product_size_title">Select Size</div>
 										<div class="product_size_list">
@@ -118,3 +119,5 @@
 			</div>
 		</div>
 	</div>
+
+@endsection

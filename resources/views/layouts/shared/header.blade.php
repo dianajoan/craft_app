@@ -7,7 +7,7 @@
 			<div class="hamburger menu_mm"><i class="fa fa-bars menu_mm" aria-hidden="true"></i></div>
 
 			<!-- Logo -->
-			<div class="sidebar_logo">
+			<div class="header_logo">
 				<a href="{{ url('/') }}"><div><span>{{ config('app.name') }}</span></div></a>
 			</div>
 
@@ -88,7 +88,7 @@
 					<a href="{{route('product.cart')}}">
 						<img src="{{asset('frontend/images/bag.png') }}" alt="">
 						<div class="cart_num">
-						[<b style="color: red;">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}} </b> ]
+						 <b style="color: red;">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}} </b> 
 						</div>
 					</a>
 				</div>

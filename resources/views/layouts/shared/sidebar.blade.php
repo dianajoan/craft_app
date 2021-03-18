@@ -60,13 +60,13 @@
 		<!-- Sidebar Navigation -->
 		<nav class="sidebar_nav">
 			<ul>
-				<li><a href="{{ route('home') }}">home</a></li>
-				<li><a href="{{ route('all-products') }}">products</a></li>
+				<li><a href="{{ route('home') }}">home<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="{{ route('all-products') }}">products<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 
 				@if(Auth::check())
 
-				<li><a href="#">{{ Auth::user()->name }}</a></li>
-				<li><a href="#">profile</a></li>
+				<li><a href="#">{{ Auth::user()->name }}<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="#">profile</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
 				<li>
 					<a href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
 					</a>
@@ -76,8 +76,8 @@
 
 				@else
 
-				<li><a href="{{ route('login') }}">login</a></li>
-				<li><a href="{{ route('register') }}">register</a></li>
+				<li><a href="{{ route('login') }}">login<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="{{ route('register') }}">register<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 
 				@endif
 
@@ -98,7 +98,7 @@
 				<a href="{{route('product.cart')}}">
 					<img src="{{ asset('frontend/images/bag.png') }}" alt="">
 					<div class="cart_num">
-					[<b style="color: red;">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}} </b> ]
+					 <b style="color: red;">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}} </b>
 					</div>
 				</a>
 			</div>
